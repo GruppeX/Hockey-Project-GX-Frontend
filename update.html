@@ -16,10 +16,10 @@
 
 <div class="container">
     <div class="item-show-activities">
-        <table id="activityTable">
+        <table id="playerTable">
             <thead>
             <tr>
-                <th colspan="4"><h2>Wellcome to activities/prices</h2></th>
+                <th colspan="4"><h2>Wellcome to playeres/prices</h2></th>
             </tr>
             <tr>
                 <th>Activity title</th>
@@ -39,14 +39,39 @@
 <div class="modal" id="myModal">
 
     <div class="modal-content">
+        <h2>Please,<br> update player here</h2>
         <span class="close">&times;</span>
 
-        <form>
-            <label for="activityTitle"></label>
-            <input id="activityTitle" name="activityTitle" placeholder="Title" required type="text">
-            <label for="activityPricePerHour"></label>
-            <input id="activityPricePerHour" min="0" name="activityPriceOneHour" placeholder="Price Per Hour" required
-                   type="number">
+        <form class="main">
+            <div class="field">
+            <label for="'playerId"></label>
+            <input id="'playerId" name="'playerId" placeholder="Id number" required type="number">
+            </div>
+         <div class="field">
+            <label for="firstName"></label>
+            <input id="firstName" min="0" name="firstName" placeholder="First name" required
+                   type="text">
+    </div>
+            <div class="field">
+            <label for="lastName"></label>
+            <input id="lastName" min="0" name="lastName" placeholder="Last name" required
+                   type="text">
+    </div>
+            <div class="field">
+            <label for="role"></label>
+            <input id="role" min="0" name="role" placeholder="player role" required
+                   type="text">
+    </div>
+            <div class="field">
+                <label for="position"></label>
+                <input id="position" min="0" name="position" placeholder="player position" required
+                       type="text">
+            </div>
+            <div class="field">
+                <label for="isSelected"></label>
+                <input id="isSelected" min="0" name="isSelected" placeholder="player isSelected" required
+                       type="text">
+            </div>
 
             <button id="submitUpdate" title="Update" type="submit">Update</button>
         </form>
