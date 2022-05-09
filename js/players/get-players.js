@@ -1,5 +1,4 @@
-
-let players = [];
+let players;
 
 async function getAllPlayers() {
     out("show all Players");
@@ -7,7 +6,8 @@ async function getAllPlayers() {
     out(players);
 }
 
-function filterGoalKeepers() {
+async function filterGoalKeepers() {
+    await getAllPlayers();
     let goalKeepers = [];
     players.forEach ((player) => {
         if (player.role.toLowerCase() === 'goalkeeper') {
@@ -15,9 +15,11 @@ function filterGoalKeepers() {
         }
     });
     out(goalKeepers);
+    return goalKeepers;
 }
 
-function filterSweepers() {
+async function filterSweepers() {
+    await getAllPlayers();
     let sweppers = [];
     players.forEach ((player) => {
         if (player.role.toLowerCase() === 'sweeper') {
@@ -25,9 +27,11 @@ function filterSweepers() {
         }
     });
     out(sweppers);
+    return sweppers;
 }
 
-function filterDefenders() {
+async function filterDefenders() {
+    await getAllPlayers();
     let defenders = [];
     players.forEach ((player) => {
         if (player.role.toLowerCase() === 'defender') {
@@ -35,9 +39,11 @@ function filterDefenders() {
         }
     });
     out(defenders);
+    return defenders;
 }
 
-function filterMidfielders() {
+async function filterMidfielders() {
+    await getAllPlayers();
     let midfielders = [];
     players.forEach ((player) => {
         if (player.role.toLowerCase() === 'midfielder') {
@@ -45,9 +51,11 @@ function filterMidfielders() {
         }
     });
     out(midfielders);
+    return midfielders;
 }
 
-function filterAttackers() {
+async function filterAttackers() {
+    await getAllPlayers();
     let attackers = [];
     players.forEach ((player) => {
         if (player.role.toLowerCase() === 'attacker') {
@@ -55,4 +63,5 @@ function filterAttackers() {
         }
     });
     out(attackers);
+    return attackers;
 }
