@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    <link rel="stylesheet" href="/css/styling.css">
+    <script defer src="../js/config.js"></script>
+    <script defer src="js/update-player.js"></script>
+
+</head>
+
+<body id="body">
+<div class="container-logo">
+    <a href="index.html"> <img class="centerlogo" height="100px" src="/img/adventure.png" alt="adventure_logo"></a>
+</div>
+
+<div class="container">
+    <div class="item-show-activities">
+        <table id="activityTable">
+            <thead>
+            <tr>
+                <th colspan="4"><h2>Wellcome to activities/prices</h2></th>
+            </tr>
+            <tr>
+                <th>Activity title</th>
+                <th>Price per hour</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="modal" id="myModal">
+
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+        <form>
+            <label for="activityTitle"></label>
+            <input id="activityTitle" name="activityTitle" placeholder="Title" required type="text">
+            <label for="activityPricePerHour"></label>
+            <input id="activityPricePerHour" min="0" name="activityPriceOneHour" placeholder="Price Per Hour" required
+                   type="number">
+
+            <button id="submitUpdate" title="Update" type="submit">Update</button>
+        </form>
+    </div>
+
+</div>
+
+<button name="Go-back" onclick="location.href='logged-in.html'">Go back</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
