@@ -22,7 +22,6 @@ async function handleFormSubmit(event) {
     try {
         const formData = new FormData(form);
         const responseData = await postFormDataAsJson(url, formData);
-        out('Formdata' + formData)
         out(responseData);
         alert(formData.get('playerTitle') + ' er oprettet');
         playerForm.reset();
@@ -35,9 +34,9 @@ async function handleFormSubmit(event) {
 
 async function postFormDataAsJson(url, formData) {
     const plainFormData = Object.fromEntries(formData.entries());
-    out('Her er vi nu' + plainFormData);
-    const formDataJsonString = JSON.stringify(formData);
-    out("Print2 her" + formDataJsonString);
+    out(plainFormData);
+    const formDataJsonString = JSON.stringify(plainFormData);
+    out(formDataJsonString);
 
     const fetchOptions = {
         method: 'POST',

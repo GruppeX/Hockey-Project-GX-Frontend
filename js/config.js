@@ -1,6 +1,5 @@
 // Print console.log
-const out = function (str) {
-    console.log(str);
+const out = function (str) {console.log(str);
 }
 
 const baseUrl = "http://localhost:8080/";

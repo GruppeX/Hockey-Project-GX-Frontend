@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Insert Activities</title>
- <!--   <link href="/img/adventure.png" rel="icon" type="image/png"/>-->
+    <title>Create player</title>
     <script defer src="../js/config.js"></script>
     <script defer src="../js/create-player.js"></script>
      <link href="/css/styling.css" rel="stylesheet" type="text/css">
-  <!--  <link href="/css/style.css" rel="stylesheet" type="text/css">&ndash;&gt;-->
 </head>
 <body id="body">
 
@@ -25,9 +23,11 @@
                     <input id="lastname" name="lastname" placeholder="Madsen" required type="text">
                 </div>
 
+
+
                 <div class="field">
                 <label for="role">Choose a role:</label>
-                <select name="role" id="role">
+                <select name="role" id="role" type="text">
                     <option value="goalkeeper">Goalkeeper</option>
                     <option value="sweeper">Sweeper</option>
                     <option value="mefenders">Defenders</option>
@@ -35,9 +35,6 @@
                     <option value="attackers">Attackers</option>
                 </select>
                 </div>
-
-
-
                 <div class="field">
                 <label for="selected">Is selected?</label>
                     <select name="selected" id="selected" type="text">
@@ -45,7 +42,6 @@
                         <option value="0">No</option>
                     </select>
                 </div>
-
 
               <!--  <div class="field">
                 <input type="radio" id="selected" name="is-selected" value="true">
