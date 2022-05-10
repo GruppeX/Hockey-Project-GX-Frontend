@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Activities</title>
+ <!--   <link href="/img/adventure.png" rel="icon" type="image/png"/>-->
+    <script defer src="../js/config.js"></script>
+    <script defer src="../js/create-player.js"></script>
+     <link href="/css/styling.css" rel="stylesheet" type="text/css">
+  <!--  <link href="/css/style.css" rel="stylesheet" type="text/css">&ndash;&gt;-->
+</head>
+<body id="body">
+
+<div class="container-create-activity">
+    <div class="item-create-activity">
+        <form class="create-player" id="newPlayerForm" method="post">
+            <div class="main">
+                <h2>Create new player</h2>
+                <div class="field">
+                    <label for="firstname">Firstname:</label>
+                    <input id="firstname" name="firstname" placeholder="Jens" required type="text">
+                </div>
+                <div class="field">
+                    <label for="lastname">Lastname:</label>
+                    <input id="lastname" name="lastname" placeholder="Madsen" required type="text">
+                </div>
+
+                <div class="field">
+                <label for="role">Choose a role:</label>
+                <select name="role" id="role">
+                    <option value="goalkeeper">Goalkeeper</option>
+                    <option value="sweeper">Sweeper</option>
+                    <option value="mefenders">Defenders</option>
+                    <option value="midfielders">Midfielders</option>
+                    <option value="attackers">Attackers</option>
+                </select>
+                </div>
+
+
+
+                <div class="field">
+                <label for="selected">Is selected?</label>
+                    <select name="selected" id="selected" type="text">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div>
+
+
+              <!--  <div class="field">
+                <input type="radio" id="selected" name="is-selected" value="true">
+                <label for="selected">Yes</label><br>
+                <input type="radio" id="not-selected" name="is-selected" value="false">
+                <label for="not-selected">No</label>
+                </div>-->
+
+                <div class="centered-button-div">
+                    <button class="submit" id="submitPlayer" title="Save a player" type="submit">Save a player</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
