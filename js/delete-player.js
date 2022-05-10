@@ -1,5 +1,12 @@
 let deletePlayerUrl = baseUrl + deleteUrl + 'player/';
 
+/**
+ * fetch starts a request and returns a promise
+ * async/await syntax fits great with fetch() because it simplifies the work with promises.
+ * @param id
+ * @returns {Promise<Response>}
+ */
+
 async function deletePlayer(id) {
     deletePlayerUrl = deletePlayerUrl + id;
     out(deletePlayerUrl);
