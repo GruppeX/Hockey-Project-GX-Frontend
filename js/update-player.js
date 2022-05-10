@@ -36,32 +36,6 @@ async function udatePlayer(player) {
 }// Update player end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //
 // private int playerId;
 //
@@ -80,7 +54,7 @@ const playerMap = new Map();
 const playerTable = document.getElementById("playerTable");
 const modalBox = document.getElementById("myModal");
 const spanClose = document.getElementsByClassName("close")[0];
-
+//const inpActivityTitle = document.getElementById('activityTitle');
 const inpPlayerId = document.getElementById('playerId');
 const inpFirstName = document.getElementById('firstName');
 const inpLastName = document.getElementById('lastName');
@@ -111,14 +85,50 @@ async function playerPlayerMap() {
     })
 }
 
-function addRow(player){
+function addRow(player) {
 
     const rowPlayer = playerTable.rows.length;
-    let row = playerTable.inserRow(rowPlayer);
+    let row = playerTable.insertRow(rowPlayer);
     let colPlayer = 0;
 
     let cell = row.insertCell(colPlayer++);
-    cell.innerText = WWWWWWWWaAAAAAAZZZZZZZZZZZZZZZZZZZZZZZZZZZ
+    cell.innerText = player.playerId;
+
+    // HVorfor har vi  ++??
+    cell = roe.insertCell(colPlayer++);
+    cell.innerText = player.firstName;
+
+    cell = row.insertCell(colPlayer++);
+    cell.innerText = player.lastName;
+
+    cell = row.insertCell(colPlayer++);
+    cell.innerText = player.role;
+
+    cell = row.insertCell(colPlayer++);
+    cell.innerText = player.position;
+
+    cell = row.insertCell(colPlayer++);
+    cell.innerText = player.isSelected;
+
+    cell = row.insertcell(colBooking++);
+    const pbUpdate = document.createElement('button');
+    pbUpdate.innerText = 'Update';
+    pbUpdate.onclick = async function (){
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        modalBox.style.display = 'block';
+        inpPlayerId.value = player.playerId;
+        inpFirstName.value = player.firstName;
+        inpLastName.value = player.lastName;
+        inpRole.value = player.role;
+        inpPosition.value = player.position;
+        inpIsSelected.value = player.isSelected;
+        pbSubmitUpdate.onclick = async function () {
+            player.
+            await  updateRow(player);
+            modalBox.style.display = 'none';
+        }
+
+    }
 
 }
 
