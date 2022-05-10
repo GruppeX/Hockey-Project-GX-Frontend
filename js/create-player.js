@@ -23,11 +23,11 @@ async function handleFormSubmit(event) {
         const formData = new FormData(form);
         const responseData = await postFormDataAsJson(url, formData);
         out(responseData);
-        alert(formData.get('playerTitle') + ' er oprettet');
+        alert(formData.get('firstName') + ' ' +  formData.get('lastName') + ' er oprettet');
         playerForm.reset();
 
     } catch (err) {
-        alert(err.message);
+        alert("Something wrong here" +  err.message);
         out(err);
     }
 }
@@ -35,13 +35,12 @@ async function handleFormSubmit(event) {
 async function postFormDataAsJson(url, formData) {
     const plainFormData = Object.fromEntries(formData.entries());
     out(plainFormData);
-    const formDataJsonString = JSON.stringify(plainFormData);
-    out(formDataJsonString);
+
 
     const fetchOptions = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: formDataJsonString
+        body: plainFormData
     };
 
     const response = await fetch(url, fetchOptions);
