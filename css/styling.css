@@ -1,7 +1,7 @@
 html {
   height: 100%;
 }
-.main h2{
+.main h2 {
   color: yellow;
   font-family: "Comic Sans MS", serif;
 }
@@ -17,7 +17,6 @@ body {
   display: flex;
   justify-content: center;
 }
-
 
 .container {
   margin-top: 20px;
@@ -48,7 +47,9 @@ body {
   justify-content: center;
 }
 
-.item-a-main-content, .item-b-main-content, .item-c-main-content {
+.item-a-main-content,
+.item-b-main-content,
+.item-c-main-content {
   width: 300px;
   height: 300px;
   margin: 50px;
@@ -76,7 +77,7 @@ body {
   margin-left: 50px;
 }
 
-.item-about-main-content h1{
+.item-about-main-content h1 {
   color: yellow;
 }
 
@@ -103,7 +104,8 @@ body {
   margin: 20px 0 20px 0;
 }
 
-.container-footer, .container-shop {
+.container-footer,
+.container-shop {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -111,15 +113,17 @@ body {
 }
 
 .shop-item2 {
-
 }
 
-
-.item-footer1, .item-footer2, .item-footer3, .item-footer4 {
+.item-footer1,
+.item-footer2,
+.item-footer3,
+.item-footer4 {
   padding: 50px 50px;
 }
 
-header, footer {
+header,
+footer {
   left: 5px;
   right: 5px;
   top: 5px;
@@ -130,7 +134,7 @@ header, footer {
   justify-content: space-between;
 }
 
-footer{
+footer {
   justify-content: center;
 }
 
@@ -159,16 +163,17 @@ footer li {
   color: yellow; /* #edc73d*/
 }
 
-header li a, footer li a {
+header li a,
+footer li a {
   color: yellow; /* #edc73d*/
   text-decoration: none;
 }
 
-header li a:hover, footer li a:hover {
+header li a:hover,
+footer li a:hover {
   color: #e4480b;
   /* text-decoration: none;*/
 }
-
 
 input {
   border-radius: 10px;
@@ -176,11 +181,13 @@ input {
   border: 2px solid #e4480b;
 }
 
-input[type="button"], input[type="submit"] {
+input[type="button"],
+input[type="submit"] {
   border: none;
 }
 
-input[type="button"]:hover, input[type="submit"]:hover {
+input[type="button"]:hover,
+input[type="submit"]:hover {
   background-color: #009789;
   cursor: pointer;
 }
@@ -190,7 +197,6 @@ select {
   padding: 12px 15px;
   border: 2px solid #e4480b;
 }
-
 
 .field {
   clear: both;
@@ -208,25 +214,32 @@ label {
 
 .main {
   float: left;
-  margin: 20px
+  margin: 20px;
 }
 
 .centered-button-div {
   text-align: center;
 }
 
-.container-login, .container-create-booking, .container-create-activity {
+.container-login,
+.container-create-booking,
+.container-create-activity {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 20px;
 }
 
-.item-login, .item-create-booking, .item-create-activity, .item-show-activities {
+.item-login,
+.item-create-booking,
+.item-create-activity,
+.item-show-activities {
   margin: 10px 0 10px 0;
 }
 
-form.login, form.create-booking, form.create-activity {
+form.login,
+form.create-booking,
+form.create-activity {
   background-color: #1f8bca;
   width: max-content;
   margin-top: 20px;
@@ -244,7 +257,7 @@ button {
   width: 150px;
   text-decoration: none;
   user-select: none;
-  padding: .7em 1.5em;
+  padding: 0.7em 1.5em;
   outline: none;
   margin: 10px;
   border-radius: 10px;
@@ -269,7 +282,6 @@ button:hover {
   height: 25%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: red; /* Fallback color */
-
 }
 
 /* Modal Content */
@@ -296,7 +308,6 @@ button:hover {
   cursor: pointer;
 }
 
-
 table {
   background-color: #1f8bca;
   border-collapse: collapse;
@@ -306,7 +317,6 @@ table {
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 0 25px 0 #e4480b;
-
 }
 
 thead tr {
@@ -316,7 +326,8 @@ thead tr {
   vertical-align: middle;
 }
 
-th, td {
+th,
+td {
   padding: 12px 15px;
 }
 
