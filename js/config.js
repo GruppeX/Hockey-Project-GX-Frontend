@@ -23,5 +23,5 @@ const MidfieldersColor = "#0077B6";
 const AttackerColor = "#E76F51";
 const DefenderColor = "#264653";
 
-const body = document.getElementById('body');
+const body = document.getElementById("body");
 body.style.backgroundColor = PrimaryDarkBlue;

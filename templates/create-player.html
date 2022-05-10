@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Create player</title>
     <script defer src="../js/config.js"></script>
     <script defer src="../js/create-player.js"></script>
-    <link href="/css/styling.css" rel="stylesheet" type="text/css">
-</head>
-<body id="body">
-<div class="container-create-activity">
-    <div class="item-create-activity">
+    <link href="/css/styling.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body id="body">
+    <div class="container-create-activity">
+      <div class="item-create-activity">
         <form class="create-player" id="newPlayerForm" method="post">
-            <div class="main">
-                <h2>Create new player</h2>
-                <div class="field">
-                    <label for="firstName">Firstname:</label>
-                    <input id="firstName" name="firstName" placeholder="Jens" required type="text">
-                </div>
-                <div class="field">
-                    <label for="lastName">Lastname:</label>
-                    <input id="lastName" name="lastName" placeholder="Madsen" required type="text">
-                </div>
-                <div class="field">
-                    <label for="role">Choose a role:</label>
-                    <select name="role" id="role" type="text">
-                        <option value="goalkeeper">Goalkeeper</option>
-                        <option value="sweeper">Sweeper</option>
-                        <option value="mefenders">Defenders</option>
-                        <option value="midfielders">Midfielders</option>
-                        <option value="attackers">Attackers</option>
-                    </select>
-                </div>
-                <!--<div class="field">
+          <div class="main">
+            <h2>Create new player</h2>
+            <div class="field">
+              <label for="firstName">Firstname:</label>
+              <input
+                id="firstName"
+                name="firstName"
+                placeholder="Jens"
+                required
+                type="text"
+              />
+            </div>
+            <div class="field">
+              <label for="lastName">Lastname:</label>
+              <input
+                id="lastName"
+                name="lastName"
+                placeholder="Madsen"
+                required
+                type="text"
+              />
+            </div>
+            <div class="field">
+              <label for="role">Choose a role:</label>
+              <select name="role" id="role" type="text">
+                <option value="goalkeeper">Goalkeeper</option>
+                <option value="sweeper">Sweeper</option>
+                <option value="mefenders">Defenders</option>
+                <option value="midfielders">Midfielders</option>
+                <option value="attackers">Attackers</option>
+              </select>
+            </div>
+            <!--<div class="field">
                 <label for="selected">Is selected?</label>
                     <select name="selected" id="selected" type="text">
                         <option value="1">Yes</option>
@@ -39,21 +51,26 @@
                     </select>
                 </div>-->
 
-                <!--  <div class="field">
+            <!--  <div class="field">
                   <input type="radio" id="selected" name="is-selected" value="true">
                   <label for="selected">Yes</label><br>
                   <input type="radio" id="not-selected" name="is-selected" value="false">
                   <label for="not-selected">No</label>
                   </div>-->
 
-                <div class="centered-button-div">
-                    <button class="submit" id="submitPlayer" title="Save a player" type="submit">Save a player</button>
-                </div>
+            <div class="centered-button-div">
+              <button
+                class="submit"
+                id="submitPlayer"
+                title="Save a player"
+                type="submit"
+              >
+                Save a player
+              </button>
             </div>
+          </div>
         </form>
+      </div>
     </div>
-</div>
-
-
-</body>
+  </body>
 </html>
