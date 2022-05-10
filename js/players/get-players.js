@@ -3,6 +3,7 @@ let players = [];
 /**
  * get all players from DB and set players in  list
  * @returns {Promise<void>} list with players
+ *  @author Jens & Jackie
  */
 async function getAllPlayers() {
   out("show all Players");
@@ -15,6 +16,7 @@ async function getAllPlayers() {
 /**
  * filter all players to only return goalkeepers
  * @returns {Promise<*[]>} list with goalkeepers
+ * @author Jens & Jackie
  */
 async function filterGoalKeepers() {
   await getAllPlayers();
