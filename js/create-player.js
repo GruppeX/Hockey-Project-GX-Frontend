@@ -1,4 +1,4 @@
-out('er i create player');
+out('we are in create-player');
 
 //generate api from config file
 const url = baseUrl + createUrl + 'player';
@@ -8,14 +8,15 @@ document.addEventListener('DOMContentLoaded', createFormEventListener);
 
 let playerForm;
 
-//add eventlistener to html form
+//add eventListener to html form
 function createFormEventListener() {
     playerForm = document.getElementById('newPlayerForm');
     playerForm.addEventListener('submit', handleFormSubmit);
 }
 
+//handle form submit and return response with the result
 async function handleFormSubmit(event) {
-    //preventDefault forhindrer form i at udføre default submit. altås sende sig selv til backend.
+    //prevent Default prevents from performing default form submit (send itself to the backend)
     event.preventDefault();
     const form = event.currentTarget;
     out(url);
@@ -23,24 +24,26 @@ async function handleFormSubmit(event) {
         const formData = new FormData(form);
         const responseData = await postFormDataAsJson(url, formData);
         out(responseData);
-        alert(formData.get('firstName') + ' ' +  formData.get('lastName') + ' er oprettet');
+        alert(formData.get('firstName') + ' ' + formData.get('lastName') + ' er oprettet');
         playerForm.reset();
 
     } catch (err) {
-        alert("Something wrong here" +  err.message);
+        alert("Something wrong here" + err.message);
         out(err);
     }
 }
 
+//post formData as JSON
 async function postFormDataAsJson(url, formData) {
     const plainFormData = Object.fromEntries(formData.entries());
     out(plainFormData);
-
+    const formDataJsonString = JSON.stringify(plainFormData);
+    out(formDataJsonString);
 
     const fetchOptions = {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: plainFormData
+        body: formDataJsonString
     };
 
     const response = await fetch(url, fetchOptions);
