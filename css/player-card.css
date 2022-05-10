@@ -134,6 +134,8 @@
     margin: 0 7px;
     width: 36px;
     height: 36px;
+    border: 0;
+    background-color: transparent;
     -webkit-animation: socials 1.5s;
     animation: socials 1.5s;
     -webkit-animation-fill-mode: both;
