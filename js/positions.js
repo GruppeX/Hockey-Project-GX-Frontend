@@ -1,7 +1,6 @@
-const ddPositions = document.getElementById('selectedPosition');
+const ddPositions = document.getElementById("selectedPosition");
 
 //Print position
-ddPositions.addEventListener('change', function () {
-    out(ddPositions.value);
+ddPositions.addEventListener("change", function () {
+  out(ddPositions.value);
 });
-
