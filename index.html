@@ -118,7 +118,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Find player</h5>
+            <h5 class="modal-title">Create player</h5>
             <button
               type="button"
               class="btn-close"
@@ -126,9 +126,29 @@
               aria-label="Close"
             ></button>
           </div>
+          <form id="createPlayerForm" method="post">
           <div class="modal-body">
-            her skal man kunne udfylde information om en spiller
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="firstNameCreate" placeholder="First Name">
+              <label for="firstNameCreate">First Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="lastNameCreate" placeholder="Last Name">
+              <label for="lastNameCreate">Last Name</label>
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupSelect01">Role</label>
+              <select class="form-select form-select-lg" id="inputGroupSelect01" style="font-size: 1rem">
+                <option selected>Choose...</option>
+                <option value="goalkeeperRole">Goalkeeper</option>
+                <option value="sweeperRole">Sweeper</option>
+                <option value="defenderRole">Defender</option>
+                <option value="midfielderRole">Midfielder</option>
+                <option value="AttackerRole">Attacker</option>
+              </select>
+            </div>
           </div>
+          </form>
           <div class="modal-footer">
             <button
               type="button"
