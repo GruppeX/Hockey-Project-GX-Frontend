@@ -1,5 +1,3 @@
-out("we are in create-player");
-
 //generate api from config file
 const url = baseUrl + createUrl + "player";
 
@@ -19,7 +17,6 @@ async function handleFormSubmit(event) {
   //prevent Default prevents from performing default form submit (send itself to the backend)
   event.preventDefault();
   const form = event.currentTarget;
-  out(url);
   try {
     const formData = new FormData(form);
     const responseData = await postFormDataAsJson(url, formData);

@@ -1,24 +1,21 @@
-out("We are in select player now");
-
 const playerMap = new Map();
-document.addEventListener("DOMContentLoaded", createSearchList);
+//document.addEventListener("DOMContentLoaded", createSearchList);
+const findPlayerNav = document.getElementById("findPlayerNav");
 
+findPlayerNav.addEventListener('click', createSearchList);
 /**
  * create Player Map from list of players
  *  @author Vitaliy
  */
 
 async function createPlayerMap() {
-  out("shoe all players");
   const playerList = await getAllPlayers();
   // sorting our array with players by firstname
   playerList.sort((a, b) => a.firstName.localeCompare(b.firstName));
 
-  out(playerList);
   playerList.forEach((player) => {
     playerMap.set(player.playerId, player);
   });
-  out(playerMap);
 }
 
 /**
@@ -28,7 +25,6 @@ async function createPlayerMap() {
 
 async function createSearchList() {
   await createPlayerMap();
-  out("create list of elements");
   let playerList = document.getElementById("selectPlayer");
   playerMap.forEach((player) => {
     let li = document.createElement("li");
@@ -40,7 +36,6 @@ async function createSearchList() {
     button.classList.add("list-group-item", "list-group-item-action");
     li.appendChild(button);
     playerList.appendChild(li);
-    out(player);
   });
 }
 

@@ -6,11 +6,9 @@ let players = [];
  *  @author Jens & Jackie
  */
 async function getAllPlayers() {
-  out("show all Players");
   players = await fetch(baseUrl + showUrl + "players").then((response) =>
     response.json()
   );
-  out(players);
   return players;
 }
 
@@ -27,7 +25,6 @@ async function filterGoalKeepers() {
       goalKeepers.push(player);
     }
   });
-  out(goalKeepers);
   return goalKeepers;
 }
 
@@ -43,7 +40,6 @@ async function filterSweepers() {
       sweppers.push(player);
     }
   });
-  out(sweppers);
   return sweppers;
 }
 
@@ -59,7 +55,6 @@ async function filterDefenders() {
       defenders.push(player);
     }
   });
-  out(defenders);
   return defenders;
 }
 
@@ -75,7 +70,6 @@ async function filterMidfielders() {
       midfielders.push(player);
     }
   });
-  out(midfielders);
   return midfielders;
 }
 
@@ -91,6 +85,5 @@ async function filterAttackers() {
       attackers.push(player);
     }
   });
-  out(attackers);
   return attackers;
 }
