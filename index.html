@@ -96,7 +96,7 @@
             <div class="modal-body">
                 <div class="input-group mb-3">
                     <div class="form-floating form-floating-group flex-grow-1">
-                        <input type="text" class="form-control" id="searchPlayer" placeholder="Search">
+                        <input type="text" class="form-control" id="searchPlayer" placeholder="Search" onkeyup="searchPlayers()">
                         <label for="searchPlayer">Search</label>
                     </div>
                     <span class="input-group-text"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -106,13 +106,13 @@
                         </svg></span>
                 </div>
                 <div class="form-floating mb-3">
-                    <ul class="list-group">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
-                        <li class="list-group-item">A fourth item</li>
-                        <li class="list-group-item">And a fifth one</li>
-                    </ul>
+
+                    <nav class="player-scroll">
+                        <ul class="list-group" id="selectPlayer">
+
+                        </ul>
+                    </nav>
+
                 </div>
             </div>
 
