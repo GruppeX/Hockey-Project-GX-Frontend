@@ -28,13 +28,14 @@ async function handleFormSubmit(event) {
       formData.get("firstName") +
         " " +
         formData.get("lastName") +
-        " er oprettet"
+        " is created"
     );
-    playerForm.reset();
   } catch (err) {
-    alert("Something wrong here" + err.message);
+    alert("Something went wrong here " + err.message);
     out(err);
   }
+  playerForm.reset();
+
 }
 
 //post formData as JSON
@@ -56,5 +57,5 @@ async function postFormDataAsJson(url, formData) {
     throw new Error(errorMessage);
   }
 
-  return response.json();
+  return response;
 }

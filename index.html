@@ -128,18 +128,18 @@
                 <h5 class="modal-title" style="color: white">Create player</h5>
                 <button
                         type="button"
-                        class="btn-close"
+                        class="btn-close btn-close-white"
                         data-bs-dismiss="modal"
                         aria-label="Close"
                 ></button>
             </div>
-            <form class="was-validated" id="createPlayerForm" method="post">
+            <form id="createPlayerForm" method="post">
                 <div class="modal-body">
                     <div class="form-floating mb-3">
                         <div class="mb-3 mt-3">
 
                             <label for="firstNameCreate">First Name</label>
-                        <input type="text" class="form-control" id="firstNameCreate" placeholder="First Name"
+                        <input name="firstName" type="text" class="form-control is-valid" id="firstNameCreate" placeholder="First Name" minlength="1"
                                required onkeypress="return (event.charCode > 64 &&
                                event.charCode < 91) ||
                                 (event.charCode > 96 &&
@@ -152,7 +152,7 @@
                     <div class="form-floating mb-3">
                         <div class="mb-3 mt-3">
                             <label for="lastNameCreate">Last Name</label>
-                        <input type="text" class="form-control" id="lastNameCreate" placeholder="Last Name"
+                        <input name="lastName" type="text" class="form-control is-valid" id="lastNameCreate" placeholder="Last Name"
                                required onkeypress="return (event.charCode > 64 &&
                                 event.charCode < 91) ||
                                  (event.charCode > 96 &&
@@ -166,7 +166,7 @@
                     <div class="input-group mb-3">
 
                         <label class="input-group-text" for="inputGroupSelect01">Role</label>
-                        <select  class="form-select form-select-lg" id="inputGroupSelect01" required
+                        <select name="role" class="form-select form-select-lg" id="inputGroupSelect01" required
                                 style="font-size: 1rem;
                                  padding-top: 1rem;
                                  padding-bottom: 1rem;">
