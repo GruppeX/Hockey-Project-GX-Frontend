@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Index</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <title>FrontPage</title>
     <script defer src="js/config.js"></script>
@@ -31,6 +34,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/player-card.css" />
+    <script defer src="js/create-player.js"></script>
     <script defer src="js/positions.js"></script>
   </head>
   <body class="d-flex flex-column min-vh-100">
@@ -118,31 +122,79 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Find player</h5>
+        <div class="modal-content" style="width: 100.1%">
+          <div class="modal-header" style="background-color: #0d6efd">
+            <h5 class="modal-title" style="color: white">Create player</h5>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            her skal man kunne udfylde information om en spiller
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button id="createdPlayer" type="button" class="btn btn-primary">
-              Create player
-            </button>
-          </div>
+          <form id="createPlayerForm" class="form-floating" method="post">
+            <div class="modal-body">
+              <div class="form-floating mb-3">
+                <input
+                  name="firstName"
+                  type="text"
+                  class="form-control"
+                  id="firstNameCreate"
+                  placeholder="First Name"
+                  minlength="1"
+                  required
+                  onkeypress="return (event.charCode > 64 &&
+                                   event.charCode < 91) ||
+                                    (event.charCode > 96 &&
+                                     event.charCode < 123)"
+                />
+                <label for="firstNameCreate">First Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  name="lastName"
+                  type="text"
+                  class="form-control"
+                  id="lastNameCreate"
+                  placeholder="Last Name"
+                  required
+                  onkeypress="return (event.charCode > 64 &&
+                                event.charCode < 91) ||
+                                 (event.charCode > 96 &&
+                                  event.charCode < 123)"
+                />
+                <label for="lastNameCreate">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select
+                  name="role"
+                  class="form-select"
+                  id="roleCreate"
+                  required
+                >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="goalkeeperRole">Goalkeeper</option>
+                  <option value="sweeperRole">Sweeper</option>
+                  <option value="defenderRole">Defender</option>
+                  <option value="midfielderRole">Midfielder</option>
+                  <option value="AttackerRole">Attacker</option>
+                </select>
+                <label for="roleCreate">Role</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Create player
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
