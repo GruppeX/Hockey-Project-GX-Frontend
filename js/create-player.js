@@ -10,7 +10,7 @@ let playerForm;
 
 //add eventListener to html form
 function createFormEventListener() {
-  playerForm = document.getElementById("newPlayerForm");
+  playerForm = document.getElementById("createPlayerForm");
   playerForm.addEventListener("submit", handleFormSubmit);
 }
 
@@ -25,14 +25,11 @@ async function handleFormSubmit(event) {
     const responseData = await postFormDataAsJson(url, formData);
     out(responseData);
     alert(
-      formData.get("firstName") +
-        " " +
-        formData.get("lastName") +
-        " er oprettet"
+      formData.get("firstName") + " " + formData.get("lastName") + " is created"
     );
     playerForm.reset();
   } catch (err) {
-    alert("Something wrong here" + err.message);
+    alert("Something went wrong here " + err.message);
     out(err);
   }
 }
@@ -56,5 +53,5 @@ async function postFormDataAsJson(url, formData) {
     throw new Error(errorMessage);
   }
 
-  return response.json();
+  return response;
 }
