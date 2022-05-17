@@ -133,44 +133,28 @@
                         aria-label="Close"
                 ></button>
             </div>
-            <form id="createPlayerForm" method="post">
+            <form id="createPlayerForm" class="form-floating" method="post">
                 <div class="modal-body">
                     <div class="form-floating mb-3">
-                        <div class="mb-3 mt-3">
-
-                            <label for="firstNameCreate">First Name</label>
-                        <input name="firstName" type="text" class="form-control is-valid" id="firstNameCreate" placeholder="First Name" minlength="1"
-                               required onkeypress="return (event.charCode > 64 &&
-                               event.charCode < 91) ||
-                                (event.charCode > 96 &&
-                                 event.charCode < 123)">
-
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
+                            <input name="firstName" type="text" class="form-control" id="firstNameCreate" placeholder="First Name" minlength="1"
+                                   required onkeypress="return (event.charCode > 64 &&
+                                   event.charCode < 91) ||
+                                    (event.charCode > 96 &&
+                                     event.charCode < 123)">
+                        <label for="firstNameCreate">First Name</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <div class="mb-3 mt-3">
-                            <label for="lastNameCreate">Last Name</label>
-                        <input name="lastName" type="text" class="form-control is-valid" id="lastNameCreate" placeholder="Last Name"
+                        <input name="lastName" type="text" class="form-control" id="lastNameCreate" placeholder="Last Name"
                                required onkeypress="return (event.charCode > 64 &&
                                 event.charCode < 91) ||
                                  (event.charCode > 96 &&
                                   event.charCode < 123)" >
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
+                        <label for="lastNameCreate">Last Name</label>
 
                     </div>
-                    <div class="mb-3">
-                    <div class="input-group mb-3">
-
-                        <label class="input-group-text" for="inputGroupSelect01">Role</label>
-                        <select name="role" class="form-select form-select-lg" id="inputGroupSelect01" required
-                                style="font-size: 1rem;
-                                 padding-top: 1rem;
-                                 padding-bottom: 1rem;">
-                            <option selected  value="" >Choose...</option>
+                    <div class="form-floating mb-3">
+                        <select name="role" class="form-select" id="roleCreate" required>
+                            <option selected disabled value="" >Choose...</option>
                             <option value="goalkeeperRole">Goalkeeper</option>
                             <option value="sweeperRole">Sweeper</option>
                             <option value="defenderRole">Defender</option>
@@ -178,29 +162,24 @@
                             <option value="AttackerRole">Attacker</option>
 
                         </select>
-
-                        <div class="valid-feedback">Valid.</div>
-                        <div class="invalid-feedback">Please choose a valid option.</div>
+                        <label for="roleCreate">Role</label>
                     </div>
                     </div>
+                <div class="modal-footer">
+                    <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                    >
+                        Close
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Create player
+                    </button>
                 </div>
-
-            <div class="modal-footer">
-                <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                >
-                    Close
-                </button>
-                <button id="createdPlayer" type="submit" class="btn btn-primary">
-                    Create player
-                </button>
-            </div>
             </form>
         </div>
     </div>
-    </form>
 </div>
 
 <!-- Navigation bar -->
