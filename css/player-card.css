@@ -186,8 +186,15 @@
   }
 }
 
-.player-scroll{width:auto; height:200px;overflow-y:scroll; scrollbar-width:none;}
-.player-scroll::-webkit-scrollbar{display:none;}
+.player-scroll {
+  width: auto;
+  height: 200px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.player-scroll::-webkit-scrollbar {
+  display: none;
+}
 
 li a {
   text-decoration: none;
