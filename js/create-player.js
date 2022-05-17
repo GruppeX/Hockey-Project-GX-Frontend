@@ -10,7 +10,7 @@ let playerForm;
 
 //add eventListener to html form
 function createFormEventListener() {
-  playerForm = document.getElementById("newPlayerForm");
+  playerForm = document.getElementById("createPlayerForm");
   playerForm.addEventListener("submit", handleFormSubmit);
 }
 
