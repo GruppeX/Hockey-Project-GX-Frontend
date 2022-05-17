@@ -1,31 +1,40 @@
 out("We are in select player now")
 
-document.addEventListener('DOMContentLoaded', createListFromMap);
-
-
 const playerMap = new Map();
+document.addEventListener('DOMContentLoaded', createSearchList);
 
- async function createPlayerMap() {
-     out('shoe all players');
+
+/**
+ * create Player Map from list of players
+ *  @author Vitaliy
+ */
+
+async function createPlayerMap() {
+    out('shoe all players');
     const playerList = await getAllPlayers();
     // sorting our array with players by firstname
-     playerList.sort((a, b) => a.firstName.localeCompare(b.firstName));
-    
-   out(playerList);
-      playerList.forEach((player) => {
+    playerList.sort((a, b) => a.firstName.localeCompare(b.firstName));
+
+    out(playerList);
+    playerList.forEach((player) => {
         playerMap.set(player.playerId, player);
     })
-      out(playerMap);
+    out(playerMap);
 }
 
 
-async function createListFromMap() {
-     await createPlayerMap();
+/**
+ * create search list of players in view
+ *  @author Vitaliy & Jakob
+ */
+
+async function createSearchList() {
+    await createPlayerMap();
     out("create list of elements");
     let playerList = document.getElementById('selectPlayer');
-      playerMap.forEach(player => {
-          let li = document.createElement('li');
-        
+    playerMap.forEach(player => {
+        let li = document.createElement('li');
+
         let button = document.createElement('button');
         button.type = 'button';
         button.innerText += player.firstName + '  ' + player.lastName + '  |  ' + player.role;
@@ -33,10 +42,14 @@ async function createListFromMap() {
         li.appendChild(button);
         playerList.appendChild(li);
         out(player);
-      });
-      
+    });
+
 }
 
+/**
+ * search Player by firstname, lastname and role
+ *  @author Vitaliy, Jakob, Jackie
+ */
 
 function searchPlayers() {
     let input, filter, ul, li, button, i, txtValue;
