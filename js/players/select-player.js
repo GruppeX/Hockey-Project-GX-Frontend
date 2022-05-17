@@ -32,7 +32,7 @@ async function createSearchList() {
   let playerList = document.getElementById("selectPlayer");
   playerMap.forEach((player) => {
     let li = document.createElement("li");
-    li.classList.add('player-list-tile');
+    li.classList.add("player-list-tile");
     let button = document.createElement("button");
     button.type = "button";
     button.innerText +=

@@ -1,13 +1,13 @@
 .player-scroll {
-    width: auto;
-    height: 200px;
-    overflow-y: scroll;
-    scrollbar-width: none;
+  width: auto;
+  height: 200px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 .player-scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .player-list-tile {
-    text-decoration: none;
+  text-decoration: none;
 }
