@@ -32,7 +32,7 @@ async function createSearchList() {
   let playerList = document.getElementById("selectPlayer");
   playerMap.forEach((player) => {
     let li = document.createElement("li");
-
+    li.classList.add('player-list-tile');
     let button = document.createElement("button");
     button.type = "button";
     button.innerText +=
@@ -55,7 +55,6 @@ function searchPlayers() {
   filter = input.value.toUpperCase();
   ul = document.getElementById("selectPlayer");
   li = ul.getElementsByTagName("li");
-  out(li.length);
   for (i = 0; i < li.length; i++) {
     button = li[i].getElementsByTagName("button")[0];
     txtValue = button.textContent || button.innerText;
