@@ -7,10 +7,11 @@ let players = [];
  */
 async function getAllPlayers() {
   out("show all Players");
-  players = await fetch(baseUrl + showUrl + "players/").then((response) =>
+  players = await fetch(baseUrl + showUrl + "players").then((response) =>
     response.json()
   );
   out(players);
+  return players;
 }
 
 /**

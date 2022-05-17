@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8"/>
     <title>FrontPage</title>
@@ -30,6 +30,10 @@
             crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/player-card.css"/>
+    <script defer src="js/config.js"></script>
+    <script defer src="js/players/get-players.js"></script>
+    <script defer src="js/players/select-player.js"></script>
+
 </head>
 <body class="d-flex flex-column min-vh-100">
 <!-- modal box's -->
@@ -78,7 +82,7 @@
         aria-hidden="true"
 >
     <div class="modal-dialog">
-        <div class="modal-content">
+        <form class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Find player</h5>
                 <button
@@ -88,21 +92,30 @@
                         aria-label="Close"
                 ></button>
             </div>
-            <div class="modal-body">
-                <div class="input-group">
-                    <div class="form-outline">
-                        <input type="search" id="form1" class="form-control"/>
-                        <label class="form-label" for="form1"></label>
-                    </div>
-                    <button type="button" class="btn btn-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                             class="bi bi-search" viewBox="0 0 16 16">
-                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                        </svg>
-                    </button>
-                </div>
 
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="form-floating form-floating-group flex-grow-1">
+                        <input type="text" class="form-control" id="searchPlayer" placeholder="Search">
+                        <label for="searchPlayer">Search</label>
+                    </div>
+                    <span class="input-group-text"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                         fill="currentColor"
+                                                         class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <ul class="list-group">
+                        <li class="list-group-item">An item</li>
+                        <li class="list-group-item">A second item</li>
+                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item">A fourth item</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                </div>
             </div>
+
             <div class="modal-footer">
                 <button
                         type="button"
@@ -115,7 +128,8 @@
                     Select player
                 </button>
             </div>
-        </div>
+
+        </form>
     </div>
 </div>
 
