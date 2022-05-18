@@ -33,11 +33,17 @@ async function createSearchList() {
     button.type = "button";
     button.innerText +=
       player.firstName + "  " + player.lastName + "  |  " + player.role;
+    button.addEventListener("click", () => {
+      const label = document.getElementById("playerNameCard1");
+      label.innerHTML = player.firstName + " " + player.lastName;
+    })
     button.classList.add("list-group-item", "list-group-item-action");
     li.appendChild(button);
     playerList.appendChild(li);
   });
 }
+
+
 
 /**
  * search Player by firstname, lastname and role
