@@ -17,6 +17,9 @@ ddPositions.addEventListener("change", function () {
     out(ddPositions.value);
 });
 
+/**
+ * Loops throughout the possible positions, so the correct player roles show up on the cards
+ */
 function changeRoleOnCards() {
     if (ddPositions.value === '1-3-2-4') {
         for (let i = 0; i < rolePos1.length; i++) {
