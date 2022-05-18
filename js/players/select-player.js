@@ -20,7 +20,7 @@ async function createPlayerMap() {
 
 /**
  * create search list of players in view
- *  @author Vitaliy & Jakob
+ *  @author Vitaliy & Jakob & Jackie & Christoffer
  */
 
 async function createSearchList() {
@@ -33,11 +33,9 @@ async function createSearchList() {
     button.type = "button";
     button.innerText +=
       player.firstName + "  " + player.lastName + "  |  " + player.role;
-    button.addEventListener("click", () => {
-      const label = document.getElementById("playerNameCard1");
-      label.innerHTML = player.firstName + " " + player.lastName;
-    })
+    button.onclick = function () {selectedPlayer(player);}
     button.classList.add("list-group-item", "list-group-item-action");
+    button.setAttribute("data-bs-dismiss", "modal");
     li.appendChild(button);
     playerList.appendChild(li);
   });
