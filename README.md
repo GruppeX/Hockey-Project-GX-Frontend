@@ -93,9 +93,13 @@ This project does not require installation and simply needs to be downloaded usi
 <git clone https://github.com/GruppeX/Hockey-Project-GX-Frontend.git>
 ```
 
-Afterwords, open the project in IntelliJ IDEA [Integrated Development Environment](https://uk.wikipedia.org/wiki/IDE)
-and run index.html file in your browser
+
  
+ 
+## Executing program
+
+Simply open the project in IntelliJ IDEA [Integrated Development Environment](https://uk.wikipedia.org/wiki/IDE)
+and run index.html file in your browser
  
  
 ## Contributors
