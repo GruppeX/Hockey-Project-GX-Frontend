@@ -96,6 +96,16 @@
     right: 0px;
 }
 
+.goalLine {
+    position: absolute;
+    margin-top: 28.3%;
+    left: 8.5%;
+    width: 82.5%;
+    height: 10%;
+    border: solid #edf4f6;
+    border-width: 0 1px 0 1px;
+}
+
 .playerCard {
     content: "";
     position: absolute;
@@ -173,7 +183,7 @@
 
 .p2 {
     top: 48%;
-    left: 8%;
+    left: 10%;
 }
 
 .p3 {
