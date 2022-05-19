@@ -28,6 +28,25 @@ function selectedPlayer(player) {
   pTag2.classList.add('initials');
   pTag2.innerText = player.lastName;
   playerField.appendChild(pTag2);
+
+  switch (player.role.toLowerCase()) {
+    case "goalkeeper":
+      playerField.style.backgroundColor = GoalKeeperColor;
+      break;
+    case "sweeper":
+      playerField.style.backgroundColor = SweeperColor;
+      break;
+    case "defender":
+      playerField.style.backgroundColor = DefenderColor;
+      break;
+    case "midfielder":
+      playerField.style.backgroundColor = MidfieldersColor;
+      break;
+    case "attacker":
+      playerField.style.backgroundColor = AttackerColor;
+      break;
+  }
+
 }
 
 /**
