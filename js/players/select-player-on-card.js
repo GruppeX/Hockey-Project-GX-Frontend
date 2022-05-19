@@ -7,8 +7,8 @@ let selectedCard;
  */
 
 function selectedPlayer(player) {
-    document.getElementById(selectedCard).innerText = player.firstName + " " + player.lastName;
-
+  document.getElementById(selectedCard).innerText =
+    player.firstName + " " + player.lastName;
 }
 
 /**
@@ -18,5 +18,5 @@ function selectedPlayer(player) {
  */
 
 function findButtonSelected(cardNumber) {
-    selectedCard = "playerNameCard" + cardNumber;
+  selectedCard = "playerNameCard" + cardNumber;
 }
