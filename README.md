@@ -12,9 +12,7 @@
 
 We have developed this project with purpose tofinish our full-stack Hockey-Project
 by making a responsive frontend with an interface for user.
-<p>
-[![|Solid](https://p.kindpng.com/picc/s/23-237439_html-css-js-bootstrap-hd-png-download.png)](https://nodesource.com/products/nsolid)
-<p>
+![n](https://p.kindpng.com/picc/s/23-237439_html-css-js-bootstrap-hd-png-download.png)](https://nodesource.com/products/nsolid)
 ## Description
 
 Hockey Project is a tool that allows the user to have an overview over players
