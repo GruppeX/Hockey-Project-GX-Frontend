@@ -11,6 +11,7 @@
 
 We have developed this project with purpose to finish our full-stack Hockey-Project
 by making a responsive frontend with an interface for user.
+
 ![n](https://p.kindpng.com/picc/s/23-237439_html-css-js-bootstrap-hd-png-download.png)
 
 ## Description
@@ -43,9 +44,62 @@ upcoming hockey game match
 before the assigning of players
 - User can se an exact placement of the assigned player on hockey field
 
+
+
+
+
+ ## Before you get started, make sure you meet the following requirements:
+
+* You have installed the latest version of [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) on your computer, for example [IntelliJ IDEA](https://www.jetbrains.com/idea/)
+
+* You have installed the latest version of [GitBash Shell for Windows](https://gitforwindows.org) or [GitBash Shell for Mac](https://downloads.digitaltrends.com/git/mac)
+
+
+* You have read [README.md](https://github.com/GruppeX/Hockey-Project-GX-Frontend/README.md)
  
  
-<h2>Contributors</h2>
+ 
+ 
+## Prerequisites 
+
+For a natural use of our frontend Hockey Project, download our backend Hockey Project needed.
+You can navigate to it by pressing on the following [link](https://github.com/GruppeX/Hockey-Project-GX-Backend)
+
+Or, the backend Hockey Project can be cloned by using a following command in GitBash Shell
+
+```
+<git clone https://github.com/GruppeX/Hockey-Project-GX-Backend.git>
+```
+
+Moreover, you will be probably need to have a Database Management System to create a database
+for opening new and updating of existing records in it. We will recommend
+to use [MySQL](https://www.mysql.com/downloads/), as that is what our system have been tested with.
+
+To create a new database for this project in MySQL, you will need to execute following SQL statement:
+```
+<CREATE DATABASE hockey_project;>
+```
+
+Database must be connected to backend Hockey Project and self project must be started an run in IntelliJ IDEA
+
+
+
+
+## Installation 
+
+This project does not require installation and simply needs to be downloaded using a following command in GitBash Shell
+
+```
+<git clone https://github.com/GruppeX/Hockey-Project-GX-Frontend.git>
+```
+
+Afterwords, open the project in IntelliJ IDEA [Integrated Development Environment](https://uk.wikipedia.org/wiki/IDE)
+and run index.html file in your browser
+ 
+ 
+ 
+## Contributors
+
 <p>Thanks to the following people who have contributed to this project:</p>
 <ul>
   <li>
@@ -64,7 +118,8 @@ before the assigning of players
   </li>
 </ul>
 
-<h2>Contact</h2>
+## Contact
+
 <p>If you want to contact me you can reach me at</p>
 <ul>
   <li>vita1117@stud.kea.dk</li>
@@ -73,4 +128,3 @@ before the assigning of players
   <li>jako8169@stud.kea.dk</li>
   <li>jack3459@stud.kea.dk</li>
 </ul>
-
