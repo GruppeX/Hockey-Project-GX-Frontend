@@ -20,27 +20,26 @@ positions on the field and can change the positions.
 Hockey Project is a program the makes it possible to manage several field
  positions at a time, and each position can hold  many different roles as
  the user may choose. Its build to make it easy for the user to make an
- overview and visualise it, so the coach and the team players knows which
+ overview and visualise it, so the coach and the team players know which
  position they need to be.
  
  
  ## Features
 
 
-- User login system, which is only allow to login an autorized user 
-- User-friendly interface, which allows to interact in real-time mode and is
-pleasant for the user eyes
-- Ability to create a new player with the supplementary information as 
-firstname, lastname and the role on the field during the game and save it
-to database
-- An option to update the information for player or remove the player from
-the players database
-- Creating of teams of players in amount of 11 persons with an opportunity
-to select all the existing players and  assign them by role and position for
-upcoming hockey game match
-- System allows to have a few position-presets, which can be easily selected
-before the assigning of players
-- User can se an exact placement of the assigned player on hockey field
+- User login system that allows you to log in only as an authorized user 
+- A user-friendly interface that allows real-time interaction and is pleasing
+ to the user's eyes
+- Possibility to create a new player with additional information like
+name, surname and role on the field during the game and save him
+to the database
+- Ability to update player information or remove a player from player database
+- Creation of teams of players in the amount of 11 people with the possibility
+select all existing players and assign them by roles and positions for
+upcoming hockey game
+- The system allows you to have several preset positions that can be easily selected
+before the assignment of players
+- The user can see the exact placement of the designated player on the hockey field
 
 
 
@@ -53,7 +52,7 @@ before the assigning of players
 * You have installed the latest version of [GitBash Shell for Windows](https://gitforwindows.org) or [GitBash Shell for Mac](https://downloads.digitaltrends.com/git/mac)
 
 
-* You have read [README.md](https://github.com/GruppeX/Hockey-Project-GX-Frontend/README.md)
+* You have read this [README.md](https://github.com/GruppeX/Hockey-Project-GX-Frontend/README.md)
  
  
  
@@ -90,8 +89,6 @@ This project does not require installation and simply needs to be downloaded usi
 ```
 <git clone https://github.com/GruppeX/Hockey-Project-GX-Frontend.git>
 ```
-
-
  
  
 ## Executing program
