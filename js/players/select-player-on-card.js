@@ -1,4 +1,5 @@
 let selectedCard;
+let selectedPlayerField;
 
 /**
  * Adds firstname and lastname on specific playerCard from given player object
@@ -9,6 +10,8 @@ let selectedCard;
 function selectedPlayer(player) {
   document.getElementById(selectedCard).innerText =
     player.firstName + " " + player.lastName;
+  const playerField = document.getElementById(selectedPlayerField);
+  playerField.innerText = player.firstName.charAt(0).toUpperCase() + " " + player.lastName.charAt(0).toUpperCase();
 }
 
 /**
@@ -20,4 +23,5 @@ function selectedPlayer(player) {
 async function findButtonSelected(cardNumber) {
   await createSearchList();
   selectedCard = "playerNameCard" + cardNumber;
+  selectedPlayerField = "p" + cardNumber;
 }

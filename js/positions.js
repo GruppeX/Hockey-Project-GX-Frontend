@@ -87,7 +87,7 @@ function changeRoleOnCards() {
 function createPlayerFields() {
   for (let i = 0; i < 11; i++) {
     let playerDiv = document.createElement('div');
-    playerDiv.classList.add('p' + (i+1), 'playerCard');
+    playerDiv.classList.add('p' + (i+1), 'playerCard', 'playerCardText');
     playerDiv.setAttribute('id', 'p' + (i+1));
     //TODO: add player context from another method
 

@@ -109,6 +109,12 @@
     z-index: 2;
 }
 
+.playerCardText {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 .playerCard:hover {
     content: "";
     position: absolute;
