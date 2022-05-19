@@ -23,3 +23,37 @@ Hockey Project is a program the makes it possible to manage several field
  the user may choose. Its build to make it easy for the user to make an
  overview and visualise it, so the coach and the team players knows which
  position they need to be.
+ 
+ 
+ 
+ 
+ 
+<h2>Contributors</h2>
+<p>Thanks to the following people who have contributed to this project:</p>
+<ul>
+  <li>
+    <a href="https://github.com/vitaliy-serdyukov">@vitaliy-serdyukov</a>
+  <li>
+    <a href="https://github.com/Jens-k-m-m">@Jens-k-m-m</a>
+  </li>
+  <li>
+    <a href="https://github.com/Dubz97">@Dubz97</a>
+  </li>
+  <li>
+    <a href="https://github.com/jakobmajiddd">@jakobmajiddd</a>
+  </li>
+  <li>
+    <a href="https://github.com/Jarkyman">@Jarkyman</a>
+  </li>
+</ul>
+
+<h2>Contact</h2>
+<p>If you want to contact me you can reach me at</p>
+<ul>
+  <li>vita1117@stud.kea.dk</li>
+  <li>jens8592@stud.kea.dk</li>
+  <li>chri62hc@stud.kea.dk</li>
+  <li>jako8169@stud.kea.dk</li>
+  <li>jack3459@stud.kea.dk</li>
+</ul>
+
