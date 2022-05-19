@@ -44,7 +44,6 @@ const pos1 = ['48%,2%', '48%,8%', '10%,20%', '48%,20%', '85%,20%', '30%,30%', '7
 const pos2 = ['48%,2%', '48%,8%', '15%,20%', '36%,20%', '63%,20%', '85%,20%', '32%,30%', '64%,30%', '10%, 40%', '50%,44%', '90%,40%'];
 const pos3 = ['48%,2%', '48%,8%', '10%,20%', '48%,20%', '85%,20%', '30%,30%', '70%,30%', '15%,38%', '85%,38%', '40%,44%', '60%, 44%'];
 
-const playerElms = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11'];
 const ddPositions = document.getElementById("selectedPosition");
 document.addEventListener("DOMContentLoaded", changeRoleOnCards);
 ddPositions.addEventListener("change", changeRoleOnCards);
@@ -86,10 +85,10 @@ function changeRoleOnCards() {
  * @author Jackie & Christoffer
  */
 function createPlayerFields() {
-  for (let i = 0; i < playerElms.length; i++) {
+  for (let i = 0; i < 11; i++) {
     let playerDiv = document.createElement('div');
-    playerDiv.classList.add(playerElms[i], 'playerCard');
-    playerDiv.setAttribute('id', playerElms[i]);
+    playerDiv.classList.add('p' + (i+1), 'playerCard');
+    playerDiv.setAttribute('id', 'p' + (i+1));
     //TODO: add player context from another method
 
     document.getElementById('hockeyField').appendChild(playerDiv);
@@ -102,20 +101,20 @@ function createPlayerFields() {
  */
 function changePositionOnField() {
   if (ddPositions.value === '1-3-2-4') {
-    for (let i = 0; i <= playerElms.length; i++) {
-      const pCard = document.getElementById(playerElms[i]);
+    for (let i = 0; i < 11; i++) {
+      const pCard = document.getElementById('p' + (i+1));
       pCard.style.top = pos1[i].split(',')[0];
       pCard.style.left = pos1[i].split(',')[1];
     }
   } else if (ddPositions.value === '1-4-2-3') {
-    for (let i = 0; i <= playerElms.length; i++) {
-      const pCard = document.getElementById(playerElms[i]);
+    for (let i = 0; i < 11; i++) {
+      const pCard = document.getElementById('p' + (i+1));
       pCard.style.top = pos2[i].split(',')[0];
       pCard.style.left = pos2[i].split(',')[1];
     }
   } else if (ddPositions.value === '1-3-4-2') {
-    for (let i = 0; i <= playerElms.length; i++) {
-      const pCard = document.getElementById(playerElms[i]);
+    for (let i = 0; i < 11; i++) {
+      const pCard = document.getElementById('p' + (i+1));
       pCard.style.top = pos3[i].split(',')[0];
       pCard.style.left = pos3[i].split(',')[1];
     }
