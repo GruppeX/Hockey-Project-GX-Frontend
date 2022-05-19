@@ -12,8 +12,6 @@
 We have developed this project with purpose to finish our full-stack Hockey-Project
 by making a responsive frontend with an interface for user.
 
-![n](https://p.kindpng.com/picc/s/23-237439_html-css-js-bootstrap-hd-png-download.png)
-
 ## Description
 
 Hockey Project is a tool that allows the user to have an overview over players
@@ -99,8 +97,30 @@ This project does not require installation and simply needs to be downloaded usi
 ## Executing program
 
 Simply open the project in IntelliJ IDEA [Integrated Development Environment](https://uk.wikipedia.org/wiki/IDE)
-and run index.html file in your browser
+and run <b>index.html</b> file in your browser
  
+ 
+ 
+ ## Contributing to frontend Hockey Project
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+
+Fork the Project
+
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+
+Push to the Branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+ 
+ 
+## Built with
+
+![n](https://p.kindpng.com/picc/s/23-237439_html-css-js-bootstrap-hd-png-download.png)
+
  
 ## Contributors
 
