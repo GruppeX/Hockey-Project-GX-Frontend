@@ -12,6 +12,7 @@
 
 We have developed this project with purpose tofinish our full-stack Hockey-Project
 by making a responsive frontend with an interface for user.
+[![N|Solid](https://p.kindpng.com/picc/s/23-237439_html-css-js-bootstrap-hd-png-download.png)](https://nodesource.com/products/nsolid)
 
 ## Description
 
