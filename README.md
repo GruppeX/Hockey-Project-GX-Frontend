@@ -9,9 +9,10 @@
 ![](https://img.shields.io/github/issues/GruppeX/Hockey-Project-GX-Frontend)
 
 
-We have developed this project with purpose tofinish our full-stack Hockey-Project
+We have developed this project with purpose to finish our full-stack Hockey-Project
 by making a responsive frontend with an interface for user.
 ![n](https://p.kindpng.com/picc/s/23-237439_html-css-js-bootstrap-hd-png-download.png)
+
 ## Description
 
 Hockey Project is a tool that allows the user to have an overview over players
@@ -24,7 +25,24 @@ Hockey Project is a program the makes it possible to manage several field
  position they need to be.
  
  
- 
+ ## Features
+
+
+- User login system, which is only allow to login an autorized user 
+- User-friendly interface, which allows to interact in real-time mode and is
+pleasant for the user eyes
+- Ability to create a new player with the supplementary information as 
+firstname, lastname and the role on the field during the game and save it
+to database
+- An option to update the information for player or remove the player from
+the players database
+- Creating of teams of players in amount of 11 persons with an opportunity
+to select all the existing players and  assign them by role and position for
+upcoming hockey game match
+- System allows to have a few position-presets, which can be easily selected
+before the assigning of players
+- User can se an exact placement of the assigned player on hockey field
+
  
  
 <h2>Contributors</h2>
