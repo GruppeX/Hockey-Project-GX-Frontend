@@ -1,0 +1,176 @@
+.wrapper {
+    width: 98%;
+    max-width: 800px;
+    margin-top: 40px;
+    padding: 10px 10px;
+    background-color: #02b7d6;
+    border-radius: 5px;
+}
+
+.campo {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 0;
+    margin: 10px auto;
+    padding: 0 0 60% 0;
+    background-color: #02b7d6;
+}
+
+.centerLine,
+.wingLine
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 1px solid #323642;
+}
+
+.centerLine:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 0;
+    height: 100%;
+    margin-left: 1px;
+    border: 1px dashed #323642;
+}
+
+.wingLine:before {
+    content: "";
+    position: absolute;
+    left: 25%;
+    display: block;
+    width: 0;
+    height: 100%;
+    margin-left: 0.5px;
+    border: 0.5px solid #323642;
+}
+
+.wingLine:after {
+    content: "";
+    position: absolute;
+    left: 75%;
+    display: block;
+    width: 0;
+    height: 100%;
+    margin-left: 0.5px;
+    border: 0.5px solid #323642;
+}
+
+.campo:after {
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 1px;
+    margin: -8% 0 0 -1px;
+    display: block;
+    width: 16%;
+    height: 80%;
+    border: 1px solid #323642;
+    border-radius: 100% 0 0 100%;
+    z-index: 2;
+}
+
+.campo:before {
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 1px;
+    margin: -8% 0 0 -1px;
+    display: block;
+    width: 16%;
+    height: 80%;
+    border: 1px solid #323642;
+    border-radius: 0 100% 100% 0;
+    z-index: 2;
+}
+
+.campo:after {
+    left: auto;
+    right: 0px;
+}
+
+.playerCard {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 5%;
+    height: 8%;
+    background-color: gray;
+    border-radius: 20%;
+    z-index: 2;
+}
+
+.playerCard:hover {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25%;
+    height: 25%;
+    background-color: #027dab;
+    border-radius: 8%;
+    z-index: 3;
+}
+
+.p1 {
+    top: 48%;
+    left: 2%;
+}
+
+.p2 {
+    top: 48%;
+    left: 8%;
+}
+
+.p3 {
+    top: 10%;
+    left: 20%;
+}
+
+.p4 {
+    top: 48%;
+    left: 20%;
+}
+
+.p5 {
+    top: 85%;
+    left: 20%;
+}
+
+.p6 {
+    top: 30%;
+    left: 30%;
+}
+
+.p7 {
+    top: 70%;
+    left: 30%;
+}
+
+.p8 {
+    top: 40%;
+    left: 38%;
+}
+
+.p9 {
+    top: 60%;
+    left: 38%;
+}
+
+.p10 {
+    top: 15%;
+    left: 44%;
+}
+
+.p11 {
+    top: 85%;
+    left: 44%;
+}
