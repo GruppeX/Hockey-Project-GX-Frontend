@@ -1,5 +1,4 @@
 const playerMap = new Map();
-document.addEventListener("DOMContentLoaded", createSearchList); //TODO: skal være på cardfield og ikke load
 const findPlayerNav = document.getElementById("findPlayerNav");
 
 findPlayerNav.addEventListener("click", createSearchList);

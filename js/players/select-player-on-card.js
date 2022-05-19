@@ -17,6 +17,7 @@ function selectedPlayer(player) {
  * @author Jackie & Christoffer
  */
 
-function findButtonSelected(cardNumber) {
+async function findButtonSelected(cardNumber) {
+  await createSearchList();
   selectedCard = "playerNameCard" + cardNumber;
 }
