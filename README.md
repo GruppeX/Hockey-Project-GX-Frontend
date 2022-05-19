@@ -7,3 +7,8 @@
 ![](https://img.shields.io/github/tag/GruppeX/Hockey-Project-GX-Frontend)
 ![](https://img.shields.io/github/release/GruppeX/Hockey-Project-GX-Frontend)
 ![](https://img.shields.io/github/issues/GruppeX/Hockey-Project-GX-Frontend)
+
+
+We have developed this project with purpose to
+finish our full-stack Hockey-Project by making a
+responsive frontend with an interface for user.
