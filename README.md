@@ -22,23 +22,21 @@ position they need to be.
 
 # Table of Contents
 
-* [Features](#Features)
+- [Features](#Features)
 
-* [Before you get started](#Before you get started)
+- [Before you get started](#Before you get started)
 
-* [Prerequisites](#Prerequisites)
+- [Prerequisites](#Prerequisites)
 
-* [Installation](#Installation)
+- [Installation](#Installation)
 
-* [Executing program](#Executing program)
+- [Executing program](#Executing program)
 
-* [Contributing](#Contributing)
+- [Contributing](#Contributing)
 
-* [Contributors](#Contributors)
+- [Contributors](#Contributors)
 
-* [Contact](#Contact)
-
-
+- [Contact](#Contact)
 
 ## Features
 
