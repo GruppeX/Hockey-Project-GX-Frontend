@@ -32,7 +32,7 @@ position they need to be.
 
 - [Executing program](#Executing program)
 
-- [Contributing](#Contributing)
+- [Contributing](#Contributing to frontend Hockey Project)
 
 - [Contributors](#Contributors)
 
