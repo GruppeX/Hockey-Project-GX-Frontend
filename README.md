@@ -34,7 +34,7 @@ position they need to be.
 
 - [Contributing](#Contributing to frontend Hockey Project)
 
-- [Contributors](#Contributors)
+- [Contributors](#Contributors1)
 
 - [Contact](#Contact)
 
