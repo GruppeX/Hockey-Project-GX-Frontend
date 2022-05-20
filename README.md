@@ -34,7 +34,7 @@ position they need to be.
 
 - [Contributing](#Contributing to frontend Hockey Project)
 
-- [Built with](#Built with)
+- [Built with](#Built)
 
 - [Contributors](#Contributors)
 
