@@ -20,6 +20,26 @@ the user may choose. Its build to make it easy for the user to make an
 overview and visualise it, so the coach and the team players know which
 position they need to be.
 
+# Table of Contents
+
+* [Features](#Features)
+
+* [Before you get started](#Before you get started)
+
+* [Prerequisites](#Prerequisites)
+
+* [Installation](#Installation)
+
+* [Executing program](#Executing program)
+
+* [Contributing](#Contributing)
+
+* [Contributors](#Contributors)
+
+* [Contact](#Contact)
+
+
+
 ## Features
 
 - User login system that allows you to log in only as an authorized user
