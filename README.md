@@ -30,11 +30,11 @@ position they need to be.
 
 - [Installation](#Installation)
 
-- [Executing program](#Executing program)
+- [Executing program](#Executing-program)
 
 - [Contributing](#Contributing to frontend Hockey Project)
 
-- [Built with](#Built #with)
+- [Built with](#Built-with)
 
 - [Contributors](#Contributors)
 
