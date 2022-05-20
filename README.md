@@ -24,7 +24,7 @@ position they need to be.
 
 - [Features](#Features)
 
-- [Before you get started](#Before you get started, make sure you meet the following requirements:)
+- [Before you get started](#Before you get started, make sure you meet the following requirements:#)
 
 - [Prerequisites](#Prerequisites)
 
