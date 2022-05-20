@@ -24,7 +24,7 @@ position they need to be.
 
 - [Features](#Features)
 
-- [Before you get started](#Before you get started)
+- [Before you get started, make sure you meet the following requirements:](#Before you get started)
 
 - [Prerequisites](#Prerequisites)
 
@@ -32,7 +32,7 @@ position they need to be.
 
 - [Executing program](#Executing program)
 
-- [Contributing](#Contributing to frontend Hockey Project)
+- [Contributing to frontend Hockey Project](#Contributing)
 
 - [Contributors](#Contributors)
 
