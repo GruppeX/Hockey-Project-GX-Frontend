@@ -1,13 +1,15 @@
-# Gruppe X Hockey Project (Frontend)
-
 ![](https://img.shields.io/github/repo-size/GruppeX/Hockey-Project-GX-Frontend)
 ![](https://img.shields.io/github/contributors/GruppeX/Hockey-Project-GX-Frontend)
 ![](https://img.shields.io/github/stars/GruppeX/Hockey-Project-GX-Frontend)
 ![](https://img.shields.io/github/forks/GruppeX/Hockey-Project-GX-Frontend)
 ![](https://img.shields.io/github/issues/GruppeX/Hockey-Project-GX-Frontend)
 
+# Gruppe X Hockey Project (Frontend)
+
 We have developed this project with purpose to finish our full-stack Hockey-Project
 by making a responsive frontend with an interface for user.
+
+![](img/Field-Hockey.png)
 
 ## Description
 
