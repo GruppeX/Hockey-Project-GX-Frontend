@@ -1,4 +1,4 @@
-# GXHPF - Gruppe X Hockey Project frontend
+# Gruppe X Hockey Project (Frontend)
 
 ![](https://img.shields.io/github/repo-size/GruppeX/Hockey-Project-GX-Frontend)
 ![](https://img.shields.io/github/contributors/GruppeX/Hockey-Project-GX-Frontend)
