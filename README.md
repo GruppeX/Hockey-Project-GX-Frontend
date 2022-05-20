@@ -77,7 +77,7 @@ This project does not require installation and simply needs to be downloaded usi
 
 ## Executing program
 
-Simply open the project in IntelliJ IDEA [Integrated Development Environment](https://uk.wikipedia.org/wiki/IDE)
+Simply open the project in IntelliJ IDEA [Integrated Development Environment](https://en.wikipedia.org/wiki/IDE)
 and run <b>index.html</b> file in your browser
 
 ## Contributing to frontend Hockey Project
