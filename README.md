@@ -125,9 +125,9 @@ Open a Pull Request
 
 <p>If you want to contact me you can reach me at</p>
 <ul>
-  <li>vita1117@stud.kea.dk</li>
-  <li>jens8592@stud.kea.dk</li>
   <li>chri62hc@stud.kea.dk</li>
-  <li>jako8169@stud.kea.dk</li>
   <li>jack3459@stud.kea.dk</li>
+  <li>jako8169@stud.kea.dk</li>
+  <li>jens8592@stud.kea.dk</li>
+  <li>vita1117@stud.kea.dk</li>
 </ul>
