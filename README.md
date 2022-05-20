@@ -24,7 +24,7 @@ position they need to be.
 
 - [Features](#Features)
 
-- [Before you get started](#Before you get started, make sure you meet the following requirements:#)
+- [Before you get started](#Before-you-get-started)
 
 - [Prerequisites](#Prerequisites)
 
@@ -56,7 +56,9 @@ position they need to be.
   before the assignment of players
 - The user can see the exact placement of the designated player on the hockey field
 
-## Before you get started, make sure you meet the following requirements:
+## Before you get started
+
+Before you get started, make sure you meet the following requirements:
 
 - You have installed the latest version of [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) on your computer, for example [IntelliJ IDEA](https://www.jetbrains.com/idea/)
 
