@@ -1,232 +1,231 @@
 .wrapper {
-    width: 98%;
-    margin-top: 40px;
-    padding: 10px 20px;
-    background-color: #2366db;
-    border-radius: 5px;
+  width: 98%;
+  margin-top: 40px;
+  padding: 10px 20px;
+  background-color: #2366db;
+  border-radius: 5px;
 }
 
 .campo {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    height: 0;
-    margin: 10px auto;
-    padding: 0 0 60% 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 0;
+  margin: 10px auto;
+  padding: 0 0 60% 0;
 }
 
 .centerLine,
-.wingLine
-{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    border: 1px solid #edf4f6;
+.wingLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border: 1px solid #edf4f6;
 }
 
 .centerLine:before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    display: block;
-    width: 0;
-    height: 100%;
-    margin-left: 1px;
-    border: 1px dashed #edf4f6;
+  content: "";
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 100%;
+  margin-left: 1px;
+  border: 1px dashed #edf4f6;
 }
 
 .wingLine:before {
-    content: "";
-    position: absolute;
-    left: 25%;
-    display: block;
-    width: 0;
-    height: 100%;
-    margin-left: 0.5px;
-    border: 0.5px solid #edf4f6;
+  content: "";
+  position: absolute;
+  left: 25%;
+  display: block;
+  width: 0;
+  height: 100%;
+  margin-left: 0.5px;
+  border: 0.5px solid #edf4f6;
 }
 
 .wingLine:after {
-    content: "";
-    position: absolute;
-    left: 75%;
-    display: block;
-    width: 0;
-    height: 100%;
-    margin-left: 0.5px;
-    border: 0.5px solid #edf4f6;
+  content: "";
+  position: absolute;
+  left: 75%;
+  display: block;
+  width: 0;
+  height: 100%;
+  margin-left: 0.5px;
+  border: 0.5px solid #edf4f6;
 }
 
 .campo:after {
-    content: "";
-    position: absolute;
-    top: 23%;
-    left: 1px;
-    margin: -8% 0 0 -1px;
-    display: block;
-    width: 16%;
-    height: 80%;
-    border: 1px solid #edf4f6;
-    border-radius: 100% 0 0 100%;
-    z-index: 2;
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 1px;
+  margin: -8% 0 0 -1px;
+  display: block;
+  width: 16%;
+  height: 80%;
+  border: 1px solid #edf4f6;
+  border-radius: 100% 0 0 100%;
+  z-index: 2;
 }
 
 .campo:before {
-    content: "";
-    position: absolute;
-    top: 23%;
-    left: 1px;
-    margin: -8% 0 0 -1px;
-    display: block;
-    width: 16%;
-    height: 80%;
-    border: 1px solid #edf4f6;
-    border-radius: 0 100% 100% 0;
-    z-index: 2;
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 1px;
+  margin: -8% 0 0 -1px;
+  display: block;
+  width: 16%;
+  height: 80%;
+  border: 1px solid #edf4f6;
+  border-radius: 0 100% 100% 0;
+  z-index: 2;
 }
 
 .campo:after {
-    left: auto;
-    right: 0px;
+  left: auto;
+  right: 0px;
 }
 
 .goalLine {
-    position: absolute;
-    margin-top: 28.3%;
-    left: 8.5%;
-    width: 82.5%;
-    height: 10%;
-    border: solid #edf4f6;
-    border-width: 0 1px 0 1px;
+  position: absolute;
+  margin-top: 28.3%;
+  left: 8.5%;
+  width: 82.5%;
+  height: 10%;
+  border: solid #edf4f6;
+  border-width: 0 1px 0 1px;
 }
 
 .playerCard {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 5%;
-    height: 8%;
-    background-color: #969696;
-    border: 2px solid black;
-    border-radius: 10px;
-    z-index: 2;
-    text-align: center;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 5%;
+  height: 8%;
+  background-color: #969696;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 2;
+  text-align: center;
 }
 
 .roleCard {
-    display: none;
+  display: none;
 }
 
 .initials {
-    text-transform: uppercase;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 1.2ch;
-    font-size: 100%;
-    position: relative;
-    letter-spacing: 1ch;
-    text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1.2ch;
+  font-size: 100%;
+  position: relative;
+  letter-spacing: 1ch;
+  text-align: center;
 }
 
 .initials:after {
-    content: " ";
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    letter-spacing: 0;
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  letter-spacing: 0;
 }
 
-.playerCard:hover > .roleCard{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 10%;
-    font-size: 200%;
-    font-weight: bold;
+.playerCard:hover > .roleCard {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 10%;
+  font-size: 200%;
+  font-weight: bold;
 }
 
-.playerCard:hover > .initials{
-    text-transform: none;
-    display: inline;
-    overflow: visible;
-    font-size: 160%;
-    position: relative;
-    top: -10%;
-    margin-left: 3px;
-    letter-spacing: 0;
+.playerCard:hover > .initials {
+  text-transform: none;
+  display: inline;
+  overflow: visible;
+  font-size: 160%;
+  position: relative;
+  top: -10%;
+  margin-left: 3px;
+  letter-spacing: 0;
 }
 
-.playerCard:hover{
-    content: "";
-    position: absolute;
-    display: block;
-    width: 25%;
-    height: 25%;
-    background-color: #969696;
-    border: 2px solid black;
-    border-radius: 10px;
-    z-index: 3;
+.playerCard:hover {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25%;
+  height: 25%;
+  background-color: #969696;
+  border: 2px solid black;
+  border-radius: 10px;
+  z-index: 3;
 }
 
 .p1 {
-    top: 48%;
-    left: 2%;
+  top: 48%;
+  left: 2%;
 }
 
 .p2 {
-    top: 48%;
-    left: 10%;
+  top: 48%;
+  left: 10%;
 }
 
 .p3 {
-    top: 10%;
-    left: 20%;
+  top: 10%;
+  left: 20%;
 }
 
 .p4 {
-    top: 48%;
-    left: 20%;
+  top: 48%;
+  left: 20%;
 }
 
 .p5 {
-    top: 85%;
-    left: 20%;
+  top: 85%;
+  left: 20%;
 }
 
 .p6 {
-    top: 30%;
-    left: 30%;
+  top: 30%;
+  left: 30%;
 }
 
 .p7 {
-    top: 70%;
-    left: 30%;
+  top: 70%;
+  left: 30%;
 }
 
 .p8 {
-    top: 40%;
-    left: 38%;
+  top: 40%;
+  left: 38%;
 }
 
 .p9 {
-    top: 60%;
-    left: 38%;
+  top: 60%;
+  left: 38%;
 }
 
 .p10 {
-    top: 15%;
-    left: 44%;
+  top: 15%;
+  left: 44%;
 }
 
 .p11 {
-    top: 85%;
-    left: 44%;
+  top: 85%;
+  left: 44%;
 }
