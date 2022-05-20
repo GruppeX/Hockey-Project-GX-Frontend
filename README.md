@@ -105,19 +105,20 @@ Open a Pull Request
 <p>Thanks to the following people who have contributed to this project:</p>
 <ul>
   <li>
-    <a href="https://github.com/vitaliy-serdyukov">@vitaliy-serdyukov</a>
-  <li>
-    <a href="https://github.com/Jens-k-m-m">@Jens-k-m-m</a>
+    <a href="https://github.com/Dubz97">@Dubz97</a>
   </li>
   <li>
-    <a href="https://github.com/Dubz97">@Dubz97</a>
+    <a href="https://github.com/Jarkyman">@Jarkyman</a>
   </li>
   <li>
     <a href="https://github.com/jakobmajiddd">@jakobmajiddd</a>
   </li>
   <li>
-    <a href="https://github.com/Jarkyman">@Jarkyman</a>
+    <a href="https://github.com/Jens-k-m-m">@Jens-k-m-m</a>
   </li>
+  <li>
+    <a href="https://github.com/vitaliy-serdyukov">@vitaliy-serdyukov</a>
+    <li>
 </ul>
 
 ## Contact
