@@ -12,9 +12,9 @@ async function createPlayerMap() {
   // sorting our array with players by firstname
   playerList.sort((a, b) => a.firstName.localeCompare(b.firstName));
 
-   playerList.forEach((player) => {
-     playerMap.set(player.playerId, player);
-   });
+  playerList.forEach((player) => {
+    playerMap.set(player.playerId, player);
+  });
 }
 
 /**
@@ -27,13 +27,12 @@ async function createSearchList() {
   let playerList = document.getElementById("selectPlayer");
 
   //Remove all children
-  while( playerList.hasChildNodes() ){
+  while (playerList.hasChildNodes()) {
     playerList.removeChild(playerList.lastChild);
   }
 
   //Generate new buttons (Children)
   playerMap.forEach((player) => {
-
     let li = document.createElement("li");
     li.classList.add("player-list-tile");
     let button = document.createElement("button");
