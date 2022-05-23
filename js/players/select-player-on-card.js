@@ -7,40 +7,38 @@ let selectedCardName;
  * @param {Object} player
  * @author Jackie & Christoffer & Vitaliy
  */
-
 function selectedPlayer(player) {
 
     document.getElementById(selectedCardName).innerText =
         player.firstName + " " + player.lastName;
     const card = 'card';
-    let selectedCard = document.getElementById(card + selectedCardName.slice(-1));
-    let cardBorderThickness = '5px solid';
+    // card + number(regex, which makes digits only out of the string value)
+    let selectedCard = document.getElementById(card + selectedCardName.replace(/[^0-9]/g,""));
+    const cardBorderThickness = '5px solid';
+    // regex makes digits only out of the string value
+    let pCard = document.getElementById("playerFieldCard" + selectedCardName.replace(/[^0-9]/g,""));
+    let pCardRole = pCard.innerText;
+    out(pCardRole);
 
-    const pCard = document.getElementById("playerFieldCard" + selectedCardName.slice(-1));
-    let roleOnCard = pCard.innerText;
-    out(roleOnCard);
-   
-  
+    switch (pCardRole.toLowerCase()) {
+        case "goalkeeper":
+            selectedCard.style.border = cardBorderThickness + GoalKeeperColor;
+            break;
+        case "sweeper":
+            selectedCard.style.border = cardBorderThickness + SweeperColor;
+            break;
+        case "defender":
+            selectedCard.style.border = cardBorderThickness + DefenderColor;
+            break;
+        case "midfielder":
+            selectedCard.style.border = cardBorderThickness + MidfieldersColor;
+            break;
+        case "attacker":
+            selectedCard.style.border = cardBorderThickness + AttackerColor;
+            break;
+    }
 
-        switch (player.role.toLowerCase()) {
 
-            case "goalkeeper":
-                selectedCard.style.border = cardBorderThickness + GoalKeeperColor;
-                break;
-            case "sweeper":
-                selectedCard.style.border = cardBorderThickness + SweeperColor;
-                break;
-            case "defender":
-                selectedCard.style.border = cardBorderThickness + DefenderColor;
-                break;
-            case "midfielder":
-                selectedCard.style.border = cardBorderThickness + MidfieldersColor;
-                break;
-            case "attacker":
-                selectedCard.style.border = cardBorderThickness + AttackerColor;
-                break;
-        }
-  
 
     const playerField = document.getElementById(selectedPlayerField);
     let tags = playerField.getElementsByTagName("p");
