@@ -11,21 +11,21 @@ function selectedPlayer(player) {
   document.getElementById(selectedCard).innerText =
     player.firstName + " " + player.lastName;
   const playerField = document.getElementById(selectedPlayerField);
-  let tags = playerField.getElementsByTagName('p');
+  let tags = playerField.getElementsByTagName("p");
   // Remove old p tag if any
   for (let i = tags.length - 1; i >= 0; i--) {
     tags[i].remove();
   }
-  let pTagRole = document.createElement('p');
-  pTagRole.classList.add('roleCard');
+  let pTagRole = document.createElement("p");
+  pTagRole.classList.add("roleCard");
   pTagRole.innerText = player.role;
   playerField.appendChild(pTagRole);
-  let pTag = document.createElement('p');
-  pTag.classList.add('initials');
+  let pTag = document.createElement("p");
+  pTag.classList.add("initials");
   pTag.innerText = player.firstName;
   playerField.appendChild(pTag);
-  let pTag2 = document.createElement('p');
-  pTag2.classList.add('initials');
+  let pTag2 = document.createElement("p");
+  pTag2.classList.add("initials");
   pTag2.innerText = player.lastName;
   playerField.appendChild(pTag2);
 
@@ -46,7 +46,6 @@ function selectedPlayer(player) {
       playerField.style.backgroundColor = AttackerColor;
       break;
   }
-
 }
 
 /**
