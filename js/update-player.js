@@ -10,6 +10,7 @@ let playerUrl = baseUrl + updateUrl + "player/";
  * @returns {Promise<Response>} update one player
  * @ atu
  */
+
 async function updatePlayer(player) {
   out("player - " + player);
   playerUrl = playerUrl + player.playerId;
@@ -55,4 +56,20 @@ async function testUpdate(index) {
   out("players - " + players[index].isSelected);
 
   await updatePlayer(players[index]);
+}
+async function selectId(value){
+out(value+ "value");
+  let player = await getPlayerById(parseInt(value));
+  out(player);
+  let firstNameEdit = document.getElementById("firstNameEdit");
+  firstNameEdit.value = player.firstName;
+
+}
+function updateButton(){
+  let form = document.getElementById("editPlayerForm");
+  let fromdata = JSON.stringify(form);
+  out(fromdata);
+
+
+
 }

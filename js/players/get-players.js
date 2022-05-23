@@ -87,3 +87,17 @@ async function filterAttackers() {
   });
   return attackers;
 }
+async function getPlayerById(id) {
+  await getAllPlayers();
+ let playerResult;
+out(id +"id");
+  players.forEach((player) => {
+
+    if (player.playerId === id) {
+      out(player + "player for each");
+     playerResult = player;
+    }
+  });
+  out(playerResult + "plaer get");
+  return playerResult;
+}

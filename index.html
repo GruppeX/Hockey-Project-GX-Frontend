@@ -65,14 +65,14 @@
             ></button>
 
           </div>
-          <form id="createPlayerForm" class="form-floating" method="post">
+          <form id="editPlayerForm" class="form-floating" method="post">
             <div class="modal-body">
               <div class="form-floating mb-3">
                 <input
                         name="firstName"
                         type="text"
                         class="form-control"
-                        id="firstNameCreate"
+                        id="firstNameEdit"
                         placeholder="First Name"
                         minlength="1"
                         required
@@ -127,6 +127,7 @@
                       type="submit"
                       class="btn btn-primary"
                       style="background-color: #027dab"
+                      onclick="updateButton()"
               >
                 savePlayer
               </button>
@@ -396,7 +397,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer" id="editPlayer1"
+                data-bs-target="#editPlayer" id="editPlayer1" onclick="selectId(this.value)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
