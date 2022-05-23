@@ -1,5 +1,7 @@
-let selectedCard;
 let selectedPlayerField;
+let selectedCardName;
+
+
 
 /**
  * Adds firstname and lastname on specific playerCard from given player object
@@ -8,8 +10,34 @@ let selectedPlayerField;
  */
 
 function selectedPlayer(player) {
-  document.getElementById(selectedCard).innerText =
+
+  document.getElementById(selectedCardName).innerText =
     player.firstName + " " + player.lastName;
+   const cardId = 'card';
+  
+   let selectedCard = document.getElementById(cardId + cardNumber);
+     
+  switch (player.role.toLowerCase()) {
+    case "goalkeeper":
+      selectedCard.style.border = GoalKeeperColor;
+      break;
+    case "sweeper":
+      selectedCard.style.border = SweeperColor;
+      break;
+    case "defender":
+      selectedCard.style.border = DefenderColor;
+      break;
+    case "midfielder":
+      selectedCard.style.border = MidfieldersColor;
+      break;
+    case "attacker":
+      selectedCard.style.border = AttackerColor;
+      break;
+  }
+
+
+
+
   const playerField = document.getElementById(selectedPlayerField);
   let tags = playerField.getElementsByTagName("p");
   // Remove old p tag if any
@@ -56,6 +84,6 @@ function selectedPlayer(player) {
 
 async function findButtonSelected(cardNumber) {
   await createSearchList();
-  selectedCard = "playerNameCard" + cardNumber;
+  selectedCardName = "playerNameCard" + cardNumber;
   selectedPlayerField = "p" + cardNumber;
 }
