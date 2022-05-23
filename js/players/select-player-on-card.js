@@ -10,6 +10,12 @@ let selectedPlayerField;
 function selectedPlayer(player) {
   document.getElementById(selectedCard).innerText =
     player.firstName + " " + player.lastName;
+  let playerId = document.createElement("param");
+  playerId.style.display = "none";
+  playerId.value = player.playerId;
+  playerId.setAttribute("id", "param" + player.playerId);
+  document.getElementById(selectedCard).appendChild(playerId);
+
   const playerField = document.getElementById(selectedPlayerField);
   let tags = playerField.getElementsByTagName("p");
   // Remove old p tag if any

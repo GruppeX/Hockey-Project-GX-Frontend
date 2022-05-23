@@ -63,24 +63,76 @@
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
+
           </div>
-          <div class="modal-body">Her skal information om update være</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              id="savePlayer"
-              style="background-color: #027dab"
-              type="button"
-              class="btn btn-primary save-btn"
-            >
-              Save changes
-            </button>
+          <form id="createPlayerForm" class="form-floating" method="post">
+            <div class="modal-body">
+              <div class="form-floating mb-3">
+                <input
+                        name="firstName"
+                        type="text"
+                        class="form-control"
+                        id="firstNameCreate"
+                        placeholder="First Name"
+                        minlength="1"
+                        required
+                        onkeypress="return (event.charCode > 64 &&
+                                   event.charCode < 91) ||
+                                    (event.charCode > 96 &&
+                                     event.charCode < 123)"
+                />
+                <label for="firstNameCreate">First Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                        name="lastName"
+                        type="text"
+                        class="form-control"
+                        id="lastNameCreate"
+                        placeholder="Last Name"
+                        required
+                        onkeypress="return (event.charCode > 64 &&
+                                event.charCode < 91) ||
+                                 (event.charCode > 96 &&
+                                  event.charCode < 123)"
+                />
+                <label for="lastNameCreate">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select
+                        name="role"
+                        class="form-select"
+                        id="roleCreate"
+                        required
+                >
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Goalkeeper">Goalkeeper</option>
+                  <option value="Sweeper">Sweeper</option>
+                  <option value="Defender">Defender</option>
+                  <option value="Midfielder">Midfielder</option>
+                  <option value="Attacker">Attacker</option>
+                </select>
+                <label for="roleCreate">Role</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style="background-color: #027dab"
+              >
+                savePlayer
+              </button>
+            </div>
+          </form>
+
           </div>
         </div>
       </div>
@@ -344,7 +396,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer" id="editPlayer1"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -458,7 +510,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -572,7 +624,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer3"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -686,7 +738,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer4"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -800,7 +852,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer5"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -914,7 +966,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer6"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1028,7 +1080,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer7"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1142,7 +1194,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer8"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1256,7 +1308,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer9"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1370,7 +1422,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer10"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1484,7 +1536,7 @@
                 class="card-panel"
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
+                data-bs-target="#editPlayer"  id="editPlayer11"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
