@@ -1,4 +1,10 @@
 let playerUrl = baseUrl + updateUrl + "player/";
+let updateForm;
+
+function createFormEventListener() {
+    updateForm = document.getElementById("editPlayerForm");
+    updateForm.addEventListener("submit", updateButton);
+}
 
 /**
  * get all players from DB
@@ -44,19 +50,33 @@ async function selectedPlayerById(value) {
     out(value + "value");
     let player = await getPlayerById(parseInt(value));
     out(player);
+    let editId = document.getElementById("editId");
     let firstNameEdit = document.getElementById("firstNameEdit");
     let lastNameEdit = document.getElementById("lastNameEdit");
     let roleEdit = document.getElementById("roleEdit");
+    editId.value = player.playerId;
     firstNameEdit.value = player.firstName;
     lastNameEdit.value = player.lastName;
     roleEdit.value = player.role;
-
+    out(player.playerId);
+    createFormEventListener();
 }
 
-function updateButton() {
-    let form = document.getElementById("editPlayerForm");
-    let fromdata = JSON.stringify(form);
-    out(fromdata);
+async function updateButton(event) {
+    event.preventDefault();
+    const form = event.currentTarget;
+    out(form);
+    try {
+        const formData = new FormData(form);
+        const plainFormData = Object.fromEntries(formData.entries());
+        out(plainFormData);
+        await updatePlayer(plainFormData);
+        out(plainFormData.playerId);
 
+        selectedPlayer(plainFormData);
 
+    } catch (err) {
+
+    }
+    //findButtonSelected(plainFormData[0]);
 }

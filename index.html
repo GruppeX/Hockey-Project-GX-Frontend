@@ -67,6 +67,7 @@
             </div>
             <form id="editPlayerForm" class="form-floating" method="post">
                 <div class="modal-body">
+                    <input  name="playerId" id="editId" style="display: none">
                     <div class="form-floating mb-3">
                         <input
                                 name="firstName"
@@ -126,8 +127,8 @@
                     <button
                             type="submit"
                             class="btn btn-primary"
+                            id="submitEdit"
                             style="background-color: #027dab"
-                            onclick="updateButton()"
                     >
                         savePlayer
                     </button>
@@ -397,7 +398,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer1" onclick="selectedPlayerById(this.value)"
+                            data-bs-target="#editPlayer" id="editPlayer1" onclick="selectedPlayerById(this.value); findButtonSelected(1)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -511,7 +512,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer2"
+                            data-bs-target="#editPlayer" id="editPlayer2" onclick="selectedPlayerById(this.value); findButtonSelected(2)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -625,7 +626,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer3"
+                            data-bs-target="#editPlayer" id="editPlayer3" onclick="selectedPlayerById(this.value); findButtonSelected(3)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -739,7 +740,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer4"
+                            data-bs-target="#editPlayer" id="editPlayer4"onclick="selectedPlayerById(this.value); findButtonSelected(4)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -853,7 +854,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer5"
+                            data-bs-target="#editPlayer" id="editPlayer5" onclick="selectedPlayerById(this.value); findButtonSelected(5)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -967,7 +968,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer6"
+                            data-bs-target="#editPlayer" id="editPlayer6" onclick="selectedPlayerById(this.value); findButtonSelected(6)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1081,7 +1082,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer7"
+                            data-bs-target="#editPlayer" id="editPlayer7" onclick="selectedPlayerById(this.value); findButtonSelected(7)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1195,7 +1196,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer8"
+                            data-bs-target="#editPlayer" id="editPlayer8" onclick="selectedPlayerById(this.value); findButtonSelected(8)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1309,7 +1310,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer9"
+                            data-bs-target="#editPlayer" id="editPlayer9" onclick="selectedPlayerById(this.value); findButtonSelected(9)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1423,7 +1424,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer10"
+                            data-bs-target="#editPlayer" id="editPlayer10" onclick="selectedPlayerById(this.value); findButtonSelected(10)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -1537,7 +1538,7 @@
                             class="card-panel"
                             type="button"
                             data-bs-toggle="modal"
-                            data-bs-target="#editPlayer" id="editPlayer11"
+                            data-bs-target="#editPlayer" id="editPlayer11" onclick="selectedPlayerById(this.value); findButtonSelected(11)"
                     >
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
