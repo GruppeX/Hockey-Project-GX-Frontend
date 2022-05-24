@@ -15,10 +15,6 @@ function selectedPlayerCard(player) {
     let selectedCard = document.getElementById(card + selectedCardName.replace(/[^0-9]/g, ""));
     let cardBorderThickness = '5px solid';
 
-    const pCard = document.getElementById("playerFieldCard" + selectedCardName.replace(/[^0-9]/g, ""));
-    let roleOnCard = pCard.innerText;
-    out(roleOnCard);
-
     switch (player.role.toLowerCase()) {
         case "goalkeeper":
             selectedCard.style.border = cardBorderThickness + GoalKeeperColor;
