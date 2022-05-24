@@ -2,7 +2,7 @@
   width: 98%;
   margin-top: 40px;
   padding: 10px 20px;
-  background-color: #2366db;
+  background-color: #689cff;
   border-radius: 5px;
 }
 
@@ -127,7 +127,7 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  width: 1.2ch;
+  width: 1.7ch;
   font-size: 100%;
   position: relative;
   letter-spacing: 1ch;
