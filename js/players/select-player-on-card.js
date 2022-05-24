@@ -13,10 +13,10 @@ function selectedPlayer(player) {
     document.getElementById(selectedCardName).innerText =
         player.firstName + " " + player.lastName;
     const card = 'card';
-    let selectedCard = document.getElementById(card + selectedCardName.slice(-1));
+    let selectedCard = document.getElementById(card + selectedCardName.replace(/[^0-9]/g,""));
     let cardBorderThickness = '5px solid';
 
-    const pCard = document.getElementById("playerFieldCard" + selectedCardName.slice(-1));
+    const pCard = document.getElementById("playerFieldCard" + selectedCardName.replace(/[^0-9]/g,""));
     let roleOnCard = pCard.innerText;
     out(roleOnCard);
    

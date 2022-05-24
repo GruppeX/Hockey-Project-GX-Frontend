@@ -118,6 +118,7 @@
   text-align: center;
 }
 
+
 .roleCard {
   display: none;
 }
@@ -127,7 +128,7 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  width: 1.2ch;
+  width: 1.5ch;
   font-size: 100%;
   position: relative;
   letter-spacing: 1ch;
@@ -187,17 +188,17 @@
 
 .p3 {
   top: 10%;
-  left: 20%;
+  left: 19%;
 }
 
 .p4 {
   top: 48%;
-  left: 20%;
+  left: 19%;
 }
 
 .p5 {
   top: 85%;
-  left: 20%;
+  left: 19%;
 }
 
 .p6 {
