@@ -8,11 +8,8 @@ findPlayerNav.addEventListener("click", createSearchList);
  */
 
 async function createPlayerMap() {
-  const resultList = await getAllPlayers();
+  allPlayers = await getAllPlayers();
 
-  resultList.forEach((player) => {
-    allPlayers.push(player);
-  });
   // sorting our array with players by firstname
   allPlayers.sort((a, b) => a.firstName.localeCompare(b.firstName));
 }
