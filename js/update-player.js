@@ -1,4 +1,4 @@
-let playerUrl = baseUrl + updateUrl + "player/";
+const playerUrl = baseUrl + updateUrl + "player/";
 let updateForm;
 
 function createFormEventListener() {
@@ -16,8 +16,8 @@ function createFormEventListener() {
 
 async function updatePlayer(player) {
     out("player - " + player);
-    playerUrl = playerUrl + player.playerId;
-    out(playerUrl);
+    const url = playerUrl + player.playerId;
+    out(url);
 
     const jsonString = JSON.stringify(player);
 
@@ -29,7 +29,7 @@ async function updatePlayer(player) {
         body: jsonString,
     };
     //calls API (Backend) and wait for return
-    const response = await fetch(playerUrl, fetchOptions);
+    const response = await fetch(url, fetchOptions);
 
     out(response);
     if (!response) {
