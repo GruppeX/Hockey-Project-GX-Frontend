@@ -1,46 +1,50 @@
 let selectedPlayerField;
 let selectedCardName;
 
-
 /**
  * Adds firstname and lastname on specific playerCard from given player object
  * @param {Object} player
  * @author Jackie & Christoffer & Vitaliy
  */
 
-function selectedPlayer(player) {
+function selectedPlayerCard(player) {
 
     document.getElementById(selectedCardName).innerText =
         player.firstName + " " + player.lastName;
     const card = 'card';
-    let selectedCard = document.getElementById(card + selectedCardName.replace(/[^0-9]/g,""));
+    let selectedCard = document.getElementById(card + selectedCardName.replace(/[^0-9]/g, ""));
     let cardBorderThickness = '5px solid';
 
-    const pCard = document.getElementById("playerFieldCard" + selectedCardName.replace(/[^0-9]/g,""));
+    const pCard = document.getElementById("playerFieldCard" + selectedCardName.replace(/[^0-9]/g, ""));
     let roleOnCard = pCard.innerText;
     out(roleOnCard);
-   
-  
 
-        switch (player.role.toLowerCase()) {
+    switch (player.role.toLowerCase()) {
+        case "goalkeeper":
+            selectedCard.style.border = cardBorderThickness + GoalKeeperColor;
+            break;
+        case "sweeper":
+            selectedCard.style.border = cardBorderThickness + SweeperColor;
+            break;
+        case "defender":
+            selectedCard.style.border = cardBorderThickness + DefenderColor;
+            break;
+        case "midfielder":
+            selectedCard.style.border = cardBorderThickness + MidfieldersColor;
+            break;
+        case "attacker":
+            selectedCard.style.border = cardBorderThickness + AttackerColor;
+            break;
+    }
+}
 
-            case "goalkeeper":
-                selectedCard.style.border = cardBorderThickness + GoalKeeperColor;
-                break;
-            case "sweeper":
-                selectedCard.style.border = cardBorderThickness + SweeperColor;
-                break;
-            case "defender":
-                selectedCard.style.border = cardBorderThickness + DefenderColor;
-                break;
-            case "midfielder":
-                selectedCard.style.border = cardBorderThickness + MidfieldersColor;
-                break;
-            case "attacker":
-                selectedCard.style.border = cardBorderThickness + AttackerColor;
-                break;
-        }
-  
+/**
+ * Adds firstname, lastname and role on specific playerCardField from given player object
+ * @param {Object} player
+ * @author Jackie & Christoffer & Vitaliy
+ */
+
+function selectedPlayerCardField(player) {
 
     const playerField = document.getElementById(selectedPlayerField);
     let tags = playerField.getElementsByTagName("p");
