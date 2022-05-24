@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>FrontPage</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-      crossorigin="anonymous"
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"
     ></script>
     <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/player-card.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/hockey-field.css" />
+    <link rel="stylesheet" href="css/player-card.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/hockey-field.css"/>
     <script defer src="js/config.js"></script>
     <script defer src="js/players/get-players.js"></script>
     <script defer src="js/players/select-player.js"></script>
@@ -40,1559 +40,1643 @@
     <script defer src="js/delete-player.js"></script>
     <script defer src="js/update-player.js"></script>
     <script defer src="js/players/select-player-on-card.js"></script>
-  </head>
-  <body class="d-flex flex-column min-vh-100">
-    <!-- modal box's -->
-    <!-- Edit player modal box -->
-    <div
-      id="editPlayer"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
+    <script defer src="js/players/delete-player.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<!-- modal box's -->
+<!-- Edit player modal box -->
+<div
+        id="editPlayer"
+        class="modal fade"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+>
+    <div class="modal-dialog">
         <div class="modal-content" style="width: 100.1%">
-          <div class="modal-header" style="background-color: #027dab">
-            <h5 class="modal-title" id="exampleModalLabel" style="color: white">
-              Edit player
-            </h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">Her skal information om update være</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              id="savePlayer"
-              style="background-color: #027dab"
-              type="button"
-              class="btn btn-primary save-btn"
-            >
-              Save changes
-            </button>
-          </div>
+            <div class="modal-header" style="background-color: #027dab">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: white">
+                    Edit player
+                </h5>
+                <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                ></button>
+            </div>
+            <div class="modal-body">Her skal information om update være</div>
+            <div class="modal-footer">
+                <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                >
+                    Close
+                </button>
+                <button
+                        id="savePlayer"
+                        style="background-color: #027dab"
+                        type="button"
+                        class="btn btn-primary save-btn"
+                >
+                    Save changes
+                </button>
+            </div>
         </div>
-      </div>
     </div>
+</div>
 
-    <!-- Find player modal box -->
-    <div
-      id="findPlayer"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
+<!-- Find player modal box -->
+<div
+        id="findPlayer"
+        class="modal fade"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+>
+    <div class="modal-dialog">
         <form class="modal-content" style="width: 100.1%">
-          <div class="modal-header" style="background-color: #027dab">
-            <h5 class="modal-title" style="color: white">Find player</h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
+            <div class="modal-header" style="background-color: #027dab">
+                <h5 class="modal-title" style="color: white">Find player</h5>
+                <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                ></button>
+            </div>
 
-          <div class="modal-body">
-            <div class="input-group mb-3">
-              <div class="form-floating form-floating-group flex-grow-1">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="searchPlayer"
-                  placeholder="Search"
-                  onkeyup="searchPlayers()"
-                />
-                <label for="searchPlayer">Search</label>
-              </div>
-              <span class="input-group-text">
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="form-floating form-floating-group flex-grow-1">
+                        <input
+                                type="text"
+                                class="form-control"
+                                id="searchPlayer"
+                                placeholder="Search"
+                                onkeyup="searchPlayers()"
+                        />
+                        <label for="searchPlayer">Search</label>
+                    </div>
+                    <span class="input-group-text">
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-search"
-                  viewBox="0 0 16 16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-search"
+                        viewBox="0 0 16 16"
                 >
                   <path
-                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
                   /></svg
-              ></span>
+                ></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <nav class="player-scroll">
+                        <ul class="list-group" id="selectPlayer"></ul>
+                    </nav>
+                </div>
             </div>
-            <div class="form-floating mb-3">
-              <nav class="player-scroll">
-                <ul class="list-group" id="selectPlayer"></ul>
-              </nav>
-            </div>
-          </div>
         </form>
-      </div>
     </div>
-
-    <!-- Create player modal box -->
-    <div
-      id="createPlayer"
-      class="modal fade"
-      tabindex="-1"
-      role="dialog"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
+</div>
+<!--    delete player modal box-->
+<div
+        id="deletePlayer"
+        class="modal fade"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+>
+    <div class="modal-dialog">
         <div class="modal-content" style="width: 100.1%">
-          <div class="modal-header" style="background-color: #027dab">
-            <h5 class="modal-title" style="color: white">Create player</h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <form id="createPlayerForm" class="form-floating" method="post">
-            <div class="modal-body">
-              <div class="form-floating mb-3">
-                <input
-                  name="firstName"
-                  type="text"
-                  class="form-control"
-                  id="firstNameCreate"
-                  placeholder="First Name"
-                  minlength="1"
-                  required
-                  onkeypress="return (event.charCode > 64 &&
+            <div class="modal-header" style="background-color: #027dab">
+                <h5 class="modal-title" style="color: white">Delete player</h5>
+                <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                ></button>
+            </div>
+            <form id="deletePlayerForm" class="form-floating" method="post">
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <div class="form-floating form-floating-group flex-grow-1">
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    id="searchPlayer1"
+                                    placeholder="Search"
+                                    onkeyup="searchPlayers()"
+                            />
+                            <label for="searchPlayer1">Search</label>
+                        </div>
+                        <span class="input-group-text">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-search"
+                        viewBox="0 0 16 16"
+                >
+                  <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  /></svg
+                ></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <nav class="player-scroll">
+                            <ul class="list-group" id="deleteSelectPlayer"></ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                    >
+                        Close
+                    </button>
+                    <button
+                            type="submit"
+                            class="btn btn-primary"
+                            style="background-color: #027dab"
+                    >
+                        Create player
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Create player modal box -->
+<div
+        id="createPlayer"
+        class="modal fade"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+>
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 100.1%">
+            <div class="modal-header" style="background-color: #027dab">
+                <h5 class="modal-title" style="color: white">Create player</h5>
+                <button
+                        type="button"
+                        class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                ></button>
+            </div>
+            <form id="createPlayerForm" class="form-floating" method="post">
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input
+                                name="firstName"
+                                type="text"
+                                class="form-control"
+                                id="firstNameCreate"
+                                placeholder="First Name"
+                                minlength="1"
+                                required
+                                onkeypress="return (event.charCode > 64 &&
                                    event.charCode < 91) ||
                                     (event.charCode > 96 &&
                                      event.charCode < 123)"
-                />
-                <label for="firstNameCreate">First Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  name="lastName"
-                  type="text"
-                  class="form-control"
-                  id="lastNameCreate"
-                  placeholder="Last Name"
-                  required
-                  onkeypress="return (event.charCode > 64 &&
+                        />
+                        <label for="firstNameCreate">First Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input
+                                name="lastName"
+                                type="text"
+                                class="form-control"
+                                id="lastNameCreate"
+                                placeholder="Last Name"
+                                required
+                                onkeypress="return (event.charCode > 64 &&
                                 event.charCode < 91) ||
                                  (event.charCode > 96 &&
                                   event.charCode < 123)"
-                />
-                <label for="lastNameCreate">Last Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <select
-                  name="role"
-                  class="form-select"
-                  id="roleCreate"
-                  required
-                >
-                  <option selected disabled value="">Choose...</option>
-                  <option value="Goalkeeper">Goalkeeper</option>
-                  <option value="Sweeper">Sweeper</option>
-                  <option value="Defender">Defender</option>
-                  <option value="Midfielder">Midfielder</option>
-                  <option value="Attacker">Attacker</option>
-                </select>
-                <label for="roleCreate">Role</label>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="submit"
-                class="btn btn-primary"
-                style="background-color: #027dab"
-              >
-                Create player
-              </button>
-            </div>
-          </form>
+                        />
+                        <label for="lastNameCreate">Last Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <select
+                                name="role"
+                                class="form-select"
+                                id="roleCreate"
+                                required
+                        >
+                            <option selected disabled value="">Choose...</option>
+                            <option value="Goalkeeper">Goalkeeper</option>
+                            <option value="Sweeper">Sweeper</option>
+                            <option value="Defender">Defender</option>
+                            <option value="Midfielder">Midfielder</option>
+                            <option value="Attacker">Attacker</option>
+                        </select>
+                        <label for="roleCreate">Role</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                    >
+                        Close
+                    </button>
+                    <button
+                            type="submit"
+                            class="btn btn-primary"
+                            style="background-color: #027dab"
+                    >
+                        Create player
+                    </button>
+                </div>
+            </form>
         </div>
-      </div>
     </div>
+</div>
 
-    <!-- Navigation bar -->
-    <div class="container">
-      <nav
-        class="navbar navbar-expand-sm navbar-light bg-light rounded"
-        aria-label="Eleventh navbar example"
-      >
+<!-- Navigation bar -->
+<div class="container">
+    <nav
+            class="navbar navbar-expand-sm navbar-light bg-light rounded"
+            aria-label="Eleventh navbar example"
+    >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Hockey project</a>
-          <button
-            class="navbar-toggler collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarsExample09"
-            aria-controls="navbarsExample09"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="navbar-collapse collapse" id="navbarsExample09" style="">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <button
-                  class="nav-link active"
-                  style="border: 0; background-color: transparent"
-                  aria-current="page"
-                  data-bs-toggle="modal"
-                  data-bs-target="#createPlayer"
-                >
-                  Create new player
-                </button>
-              </li>
-              <li>
-                <button
-                  id="findPlayerNav"
-                  class="nav-link active"
-                  style="border: 0; background-color: transparent"
-                  aria-current="page"
-                  data-bs-toggle="modal"
-                  data-bs-target="#findPlayer"
-                >
-                  Search player
-                </button>
-              </li>
-            </ul>
-            <a
-              class="active btn btn-primary"
-              style="background-color: #027dab; border-color: #027dab"
-              aria-current="page"
-              href="#"
-              >Logout</a
+            <a class="navbar-brand" href="#">Hockey project</a>
+            <button
+                    class="navbar-toggler collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample09"
+                    aria-controls="navbarsExample09"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
             >
-          </div>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarsExample09" style="">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button
+                                class="nav-link active"
+                                style="border: 0; background-color: transparent"
+                                aria-current="page"
+                                data-bs-toggle="modal"
+                                data-bs-target="#createPlayer"
+                        >
+                            Create new player
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                                id="findPlayerNav"
+                                class="nav-link active"
+                                style="border: 0; background-color: transparent"
+                                aria-current="page"
+                                data-bs-toggle="modal"
+                                data-bs-target="#findPlayer"
+                        >
+                            Search player
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                                id="deletePlayerNav"
+                                class="nav-link active"
+                                style="border: 0; background-color: transparent"
+                                aria-current="page"
+                                data-bs-toggle="modal"
+                                data-bs-target="#findPlayer"
+                        >
+                            Delete player
+                        </button>
+                    </li>
+                </ul>
+                <a
+                        class="active btn btn-primary"
+                        style="background-color: #027dab; border-color: #027dab"
+                        aria-current="page"
+                        href="#"
+                >Logout</a
+                >
+            </div>
         </div>
-      </nav>
-    </div>
+    </nav>
+</div>
 
-    <!-- Body -->
+<!-- Body -->
 
-    <!-- Select player -->
-    <div class="container mt-3">
-      <div class="form-floating">
+<!-- Select player -->
+<div class="container mt-3">
+    <div class="form-floating">
         <select
-          class="form-select"
-          id="selectedPosition"
-          aria-label="Floating label select example"
+                class="form-select"
+                id="selectedPosition"
+                aria-label="Floating label select example"
         >
-          <option selected value="1-3-2-4">1-3-2-4</option>
-          <option value="1-4-2-3">1-4-2-3</option>
-          <option value="1-3-4-2">1-3-4-2</option>
+            <option selected value="1-3-2-4">1-3-2-4</option>
+            <option value="1-4-2-3">1-4-2-3</option>
+            <option value="1-3-4-2">1-3-4-2</option>
         </select>
         <label for="selectedPosition">Select a position</label>
-      </div>
     </div>
+</div>
 
-    <!-- Player Cards -->
-    <div class="container col-11">
-      <div class="row align-items-center mt-5 d-flex justify-content-center">
+<!-- Player Cards -->
+<div class="container col-11">
+    <div class="row align-items-center mt-5 d-flex justify-content-center">
         <!-- Card field 1 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard1" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard1">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard1"
-                onclick="findButtonSelected(1)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard1" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard1">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard1"
+                            onclick="findButtonSelected(1)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 2 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard2" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard2">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard2"
-                onclick="findButtonSelected(2)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard2" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard2">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard2"
+                            onclick="findButtonSelected(2)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 3 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard3" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard3">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard3"
-                onclick="findButtonSelected(3)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard3" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard3">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard3"
+                            onclick="findButtonSelected(3)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 4 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard4" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard4">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard4"
-                onclick="findButtonSelected(4)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard4" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard4">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard4"
+                            onclick="findButtonSelected(4)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 5 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard5" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard5">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard5"
-                onclick="findButtonSelected(5)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard5" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard5">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard5"
+                            onclick="findButtonSelected(5)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 6 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard6" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard6">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard6"
-                onclick="findButtonSelected(6)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard6" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard6">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard6"
+                            onclick="findButtonSelected(6)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 7 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard7" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard7">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard7"
-                onclick="findButtonSelected(7)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard7" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard7">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard7"
+                            onclick="findButtonSelected(7)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 8 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard8" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard8">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard8"
-                onclick="findButtonSelected(8)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard8" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard8">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard8"
+                            onclick="findButtonSelected(8)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 9 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard9" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard9">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                id="findPlayerOnCard9"
-                onclick="findButtonSelected(9)"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard9" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard9">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            id="findPlayerOnCard9"
+                            onclick="findButtonSelected(9)"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 10 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard10" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard10">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                onclick="findButtonSelected(10)"
-                id="findPlayerOnCard10"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard10" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard10">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            onclick="findButtonSelected(10)"
+                            id="findPlayerOnCard10"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
 
         <!-- Card field 11 widget -->
         <div class="card">
-          <!-- Face 1 -->
+            <!-- Face 1 -->
 
-          <div class="card-face face-1">
-            <!-- Settings btn TODO: måske behøves den ikke-->
-            <button
-              class="card-face_menu-button"
-              data-card-menu="data-card-menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="#015a87"
-                class="bi bi-three-dots-vertical"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                />
-              </svg>
-            </button>
-            <!-- Player role -->
-            <h2 id="playerFieldCard11" class="card-face_name">Role</h2>
-            <!-- Player name -->
-            <span class="card-face_title" id="playerNameCard11">None</span>
-            <!-- Cart Footer -->
-            <div class="card-face-footer">
-              <button
-                class="card-panel"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#editPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
+            <div class="card-face face-1">
+                <!-- Settings btn TODO: måske behøves den ikke-->
+                <button
+                        class="card-face_menu-button"
+                        data-card-menu="data-card-menu"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-pencil"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
-              <button class="card-panel" type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-x-square"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                  <path
-                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </svg>
-              </button>
-              <button
-                class="card-panel"
-                type="button"
-                onclick="findButtonSelected(11)"
-                id="findPlayerOnCard11"
-                data-bs-toggle="modal"
-                data-bs-target="#findPlayer"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
-                  fill="#015a87"
-                  class="bi bi-square"
-                  viewBox="0 0 16 16"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="#015a87"
-                    class="bi bi-search align-self-center"
-                    viewBox="-5 -5 42 42"
-                  >
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                    />
-                  </svg>
-                  <path
-                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
-                  />
-                </svg>
-              </button>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="#015a87"
+                            class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16"
+                    >
+                        <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
+                        />
+                    </svg>
+                </button>
+                <!-- Player role -->
+                <h2 id="playerFieldCard11" class="card-face_name">Role</h2>
+                <!-- Player name -->
+                <span class="card-face_title" id="playerNameCard11">None</span>
+                <!-- Cart Footer -->
+                <div class="card-face-footer">
+                    <button
+                            class="card-panel"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-pencil"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-panel" type="button">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-x-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                            <path
+                                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                            />
+                        </svg>
+                    </button>
+                    <button
+                            class="card-panel"
+                            type="button"
+                            onclick="findButtonSelected(11)"
+                            id="findPlayerOnCard11"
+                            data-bs-toggle="modal"
+                            data-bs-target="#findPlayer"
+                    >
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="42"
+                                height="42"
+                                fill="#015a87"
+                                class="bi bi-square"
+                                viewBox="0 0 16 16"
+                        >
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="26"
+                                    height="26"
+                                    fill="#015a87"
+                                    class="bi bi-search align-self-center"
+                                    viewBox="-5 -5 42 42"
+                            >
+                                <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                                />
+                            </svg>
+                            <path
+                                    d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
+</div>
 
-    <!-- Hockey Field -->
+<!-- Hockey Field -->
 
-    <div class="container d-flex justify-content-center">
-      <div class="wrapper">
+<div class="container d-flex justify-content-center">
+    <div class="wrapper">
         <div id="hockeyField" class="campo">
-          <!-- Field lines-->
-          <div class="centerLine"></div>
-          <div class="wingLine"></div>
-          <div class="goalLine"></div>
+            <!-- Field lines-->
+            <div class="centerLine"></div>
+            <div class="wingLine"></div>
+            <div class="goalLine"></div>
         </div>
-      </div>
     </div>
+</div>
 
-    <!-- Footer -->
-    <div class="container mt-auto">
-      <footer
-        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
-      >
+<!-- Footer -->
+<div class="container mt-auto">
+    <footer
+            class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+    >
         <div class="col-md-4 d-flex align-items-center">
-          <a
-            href="/"
-            class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
-          ></a>
-          <span class="text-muted">© 2022 Hockey, Inc</span>
+            <a
+                    href="/"
+                    class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+            ></a>
+            <span class="text-muted">© 2022 Hockey, Inc</span>
         </div>
-      </footer>
-    </div>
-  </body>
+    </footer>
+</div>
+</body>
 </html>

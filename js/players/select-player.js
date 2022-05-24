@@ -1,7 +1,9 @@
 const playerMap = new Map();
 const findPlayerNav = document.getElementById("findPlayerNav");
 
+
 findPlayerNav.addEventListener("click", createSearchList);
+
 /**
  * create Player Map from list of players
  *  @author Vitaliy
