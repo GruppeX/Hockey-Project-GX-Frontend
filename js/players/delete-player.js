@@ -12,12 +12,12 @@ async function createSearchListDelete() {
         button.type = "button";
         button.innerText +=
             player.firstName + "  " + player.lastName + "  |  " + player.role;
+        let id = player.playerId;
         button.onclick = function () {
-            let id = player.playerId;
             out(id);
             deletePlayer(id);
+            playerMap.clear();
         };
-               
         button.classList.add("list-group-item", "list-group-item-action");
         button.setAttribute("data-bs-dismiss", "modal");
         li.appendChild(button);
