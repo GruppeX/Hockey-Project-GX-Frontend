@@ -1,7 +1,8 @@
-const playerUrl = baseUrl + deleteUrl + "player/";
-
 const findPlayerNavDelete = document.getElementById("deletePlayerNav");
 findPlayerNavDelete.addEventListener("click", createSearchListDelete);
+
+/*const deletePlayerBtn = document.getElementById("deletePlayer");
+deletePlayerBtn.addEventListener("click", deletePlayer);*/
 
 
 async function createSearchListDelete() {
@@ -17,7 +18,7 @@ async function createSearchListDelete() {
         button.onclick = function () {
       
             deletePlayer(player);
-            playerMap.clear(); // is this necessary?
+            playerMap.clear();// shall we make it here?
         };
         button.classList.add("list-group-item", "list-group-item-action");
         button.setAttribute("data-bs-dismiss", "modal");
@@ -26,7 +27,7 @@ async function createSearchListDelete() {
     });
 }
 
-function searchPlayersDelete() {
+function searchPlayersDelete() { //TO DO: make one shared searchPlayers method
     let input, filter, ul, li, button, i, txtValue;
     input = document.getElementById("deleteSearchPlayer");
     filter = input.value.toUpperCase();
@@ -43,12 +44,6 @@ function searchPlayersDelete() {
     }
 }
 
-/*const deletePlayerBtn = document.getElementById("deletePlayer");
-deletePlayerBtn.addEventListener("click", deletePlayer);*/
-
-
-
-
 /**
  * fetch starts a request and returns a promise
  * async/await syntax fits great with fetch() because it simplifies the work with promises.
@@ -59,7 +54,7 @@ deletePlayerBtn.addEventListener("click", deletePlayer);*/
 
 async function deletePlayer(player) {
     out("player - " + player);
-    const url = playerUrl + player.playerId;
+    const url = baseUrl + deleteUrl + "player/" + player.playerId;
     out(url);
 
 
@@ -70,7 +65,7 @@ async function deletePlayer(player) {
         },
     };
     //calls API (Backend) and wait for return
-    const response = await fetch(playerUrl, fetchOptions);
+    const response = await fetch(url, fetchOptions);
     if (!response) {
         alert("Something went wrong with delete json");
     } else {
