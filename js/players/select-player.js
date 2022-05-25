@@ -33,7 +33,6 @@ async function createSearchList() {
     button.innerText +=
       player.firstName + "  " + player.lastName + "  |  " + player.role;
     button.onclick = function () {
-      returnColor(player);
       selectedPlayerCard(player);
       selectedPlayerCardField(player);
     };
