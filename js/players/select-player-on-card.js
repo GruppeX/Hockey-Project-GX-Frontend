@@ -1,15 +1,32 @@
-let selectedCard;
 let selectedPlayerField;
+let selectedCardName;
+let color;
+let styleColor;
 
 /**
  * Adds firstname and lastname on specific playerCard from given player object
  * @param {Object} player
- * @author Jackie & Christoffer
+ * @author Jackie & Christoffer & Vitaliy
  */
 
-function selectedPlayer(player) {
-  document.getElementById(selectedCard).innerText =
+function selectedPlayerCard(player) {
+  document.getElementById(selectedCardName).innerText =
     player.firstName + " " + player.lastName;
+  const selectedCard = document.getElementById(
+    "card" + selectedCardName.replace(/[^0-9]/g, "")
+  );
+  const cardBorderThickness = "5px solid";
+  styleColor = returnColor(player);
+  selectedCard.style.border = cardBorderThickness + styleColor;
+}
+
+/**
+ * Adds firstname, lastname and role on specific playerCardField from given player object
+ * @param {Object} player
+ * @author Jackie & Christoffer & Vitaliy
+ */
+
+function selectedPlayerCardField(player) {
   const playerField = document.getElementById(selectedPlayerField);
   let tags = playerField.getElementsByTagName("p");
   // Remove old p tag if any
@@ -28,24 +45,36 @@ function selectedPlayer(player) {
   pTag2.classList.add("initials");
   pTag2.innerText = player.lastName;
   playerField.appendChild(pTag2);
+  styleColor = returnColor(player);
+  playerField.style.backgroundColor = styleColor;
+}
 
+/**
+ * Takes player and returns color by players role
+ * @param {Object} player
+ * @return {string} color
+ * @author Jackie & Christoffer & Vitaliy
+ */
+
+function returnColor(player) {
   switch (player.role.toLowerCase()) {
     case "goalkeeper":
-      playerField.style.backgroundColor = GoalKeeperColor;
+      color = GoalKeeperColor;
       break;
     case "sweeper":
-      playerField.style.backgroundColor = SweeperColor;
+      color = SweeperColor;
       break;
     case "defender":
-      playerField.style.backgroundColor = DefenderColor;
+      color = DefenderColor;
       break;
     case "midfielder":
-      playerField.style.backgroundColor = MidfieldersColor;
+      color = MidfieldersColor;
       break;
     case "attacker":
-      playerField.style.backgroundColor = AttackerColor;
+      color = AttackerColor;
       break;
   }
+  return color;
 }
 
 /**
@@ -56,6 +85,6 @@ function selectedPlayer(player) {
 
 async function findButtonSelected(cardNumber) {
   await createSearchList();
-  selectedCard = "playerNameCard" + cardNumber;
+  selectedCardName = "playerNameCard" + cardNumber;
   selectedPlayerField = "p" + cardNumber;
 }
