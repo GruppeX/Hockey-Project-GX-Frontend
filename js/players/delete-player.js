@@ -1,3 +1,5 @@
+const playerUrl = baseUrl + deleteUrl + "player/";
+
 const findPlayerNavDelete = document.getElementById("deletePlayerNav");
 findPlayerNavDelete.addEventListener("click", createSearchListDelete);
 
@@ -56,8 +58,9 @@ deletePlayerBtn.addEventListener("click", deletePlayer);*/
 
 
 async function deletePlayer(player) {
-   const deletePlayerUrl = deletePlayerUrl + player.playerId;
-    out(deletePlayerUrl);
+    out("player - " + player);
+    const url = playerUrl + player.playerId;
+    out(url);
 
 
     const fetchOptions = {
@@ -67,7 +70,7 @@ async function deletePlayer(player) {
         },
     };
     //calls API (Backend) and wait for return
-    const response = await fetch(deletePlayerUrl, fetchOptions);
+    const response = await fetch(playerUrl, fetchOptions);
     if (!response) {
         alert("Something went wrong with delete json");
     } else {
