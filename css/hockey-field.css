@@ -128,7 +128,7 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  width: 1.5ch;
+  width: 1.2ch;
   font-size: 100%;
   position: relative;
   letter-spacing: 1ch;
@@ -188,17 +188,17 @@
 
 .p3 {
   top: 10%;
-  left: 19%;
+  left: 20%;
 }
 
 .p4 {
   top: 48%;
-  left: 19%;
+  left: 20%;
 }
 
 .p5 {
   top: 85%;
-  left: 19%;
+  left: 20%;
 }
 
 .p6 {
