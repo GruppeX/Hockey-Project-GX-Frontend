@@ -1,6 +1,7 @@
 let selectedPlayerField;
 let selectedCardName;
 let color;
+let styleColor;
 
 /**
  * Adds firstname and lastname on specific playerCard from given player object
@@ -14,7 +15,7 @@ function selectedPlayerCard(player) {
         player.firstName + " " + player.lastName;
     const selectedCard = document.getElementById('card' + selectedCardName.replace(/[^0-9]/g, ""));
     const cardBorderThickness = '5px solid';
-    let styleColor = returnColor(player);
+    styleColor = returnColor(player);
     selectedCard.style.border = cardBorderThickness + styleColor;
 }
 
@@ -43,7 +44,7 @@ function selectedPlayerCardField(player) {
     pTag2.classList.add("initials");
     pTag2.innerText = player.lastName;
     playerField.appendChild(pTag2);
-    let styleColor = returnColor(player);
+    styleColor = returnColor(player);
     playerField.style.backgroundColor = color;
 }
 
