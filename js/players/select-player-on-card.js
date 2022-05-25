@@ -1,5 +1,6 @@
 let selectedPlayerField;
 let selectedCardName;
+let color;
 
 /**
  * Adds firstname and lastname on specific playerCard from given player object
@@ -11,12 +12,15 @@ function selectedPlayerCard(player) {
 
     document.getElementById(selectedCardName).innerText =
         player.firstName + " " + player.lastName;
+    const selectedCard = document.getElementById('card' + selectedCardName.replace(/[^0-9]/g, ""));
+    const cardBorderThickness = '5px solid';
+    let styleColor = returnColor(player);
+    selectedCard.style.border = cardBorderThickness + styleColor;
 }
 
 /**
  * Adds firstname, lastname and role on specific playerCardField from given player object
  * @param {Object} player
- * @return {Object} playerField
  * @author Jackie & Christoffer & Vitaliy
  */
 
@@ -39,42 +43,36 @@ function selectedPlayerCardField(player) {
     pTag2.classList.add("initials");
     pTag2.innerText = player.lastName;
     playerField.appendChild(pTag2);
-    return playerField;
+    let styleColor = returnColor(player);
+    playerField.style.backgroundColor = color;
 }
 
 /**
- * Takes player and makes style on playerCard and playerCardField
- * @param {Oblect} player
+ * Takes player and returns color by players role
+ * @param {Object} player
+ * @return {string} color
  * @author Jackie & Christoffer & Vitaliy
  */
 
-async function makeStylePlayerCards(player) {
-    const cardBorderThickness = '5px solid';
-    const selectedCard = document.getElementById('card' + selectedCardName.replace(/[^0-9]/g, ""));
-    const playerField = await selectedPlayerCardField(player);
-   
+function returnColor(player) {
     switch (player.role.toLowerCase()) {
         case "goalkeeper":
-            selectedCard.style.border = cardBorderThickness + GoalKeeperColor;
-            playerField.style.backgroundColor = GoalKeeperColor;
+            color = GoalKeeperColor;
             break;
         case "sweeper":
-            selectedCard.style.border = cardBorderThickness + SweeperColor;
-            playerField.style.backgroundColor = SweeperColor;
+            color = SweeperColor;
             break;
         case "defender":
-            selectedCard.style.border = cardBorderThickness + DefenderColor;
-            playerField.style.backgroundColor = DefenderColor;
+            color = DefenderColor;
             break;
         case "midfielder":
-            selectedCard.style.border = cardBorderThickness + MidfieldersColor;
-            playerField.style.backgroundColor = MidfieldersColor;
+            color = MidfieldersColor;
             break;
         case "attacker":
-            selectedCard.style.border = cardBorderThickness + AttackerColor;
-            playerField.style.backgroundColor = AttackerColor;
+            color = AttackerColor;
             break;
     }
+    return color;
 }
 
 /**

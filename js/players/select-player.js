@@ -33,9 +33,10 @@ async function createSearchList() {
     button.innerText +=
       player.firstName + "  " + player.lastName + "  |  " + player.role;
     button.onclick = function () {
+      returnColor(player);
       selectedPlayerCard(player);
       selectedPlayerCardField(player);
-      makeStylePlayerCards(player);
+
     };
     button.classList.add("list-group-item", "list-group-item-action");
     button.setAttribute("data-bs-dismiss", "modal");
