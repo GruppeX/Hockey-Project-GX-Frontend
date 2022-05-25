@@ -2,10 +2,8 @@ const findPlayerNavDelete = document.getElementById("deletePlayerNav");
 findPlayerNavDelete.addEventListener("click", createSearchListDelete);
 
 
-
 async function createSearchListDelete() {
     await createPlayerMap();
-    out(playerMap + " TJEK HER")
     let playerList = document.getElementById("deleteSelectPlayer");
     playerMap.forEach((player) => {
         let li = document.createElement("li");
@@ -15,8 +13,11 @@ async function createSearchListDelete() {
         button.innerText +=
             player.firstName + "  " + player.lastName + "  |  " + player.role;
         button.onclick = function () {
-            /*selectedPlayer(player);  */       // deletePlayer
+            let id = player.playerId;
+            out(id);
+            deletePlayer(id);
         };
+               
         button.classList.add("list-group-item", "list-group-item-action");
         button.setAttribute("data-bs-dismiss", "modal");
         li.appendChild(button);
@@ -39,4 +40,37 @@ function searchPlayersDelete() {
             li[i].style.display = "none";
         }
     }
+}
+
+/*const deletePlayerBtn = document.getElementById("deletePlayer");
+deletePlayerBtn.addEventListener("click", deletePlayer);*/
+
+
+let deletePlayerUrl = baseUrl + deleteUrl + "player/";
+
+/**
+ * fetch starts a request and returns a promise
+ * async/await syntax fits great with fetch() because it simplifies the work with promises.
+ * @param id
+ * @returns {Promise<Response>}
+ */
+
+async function deletePlayer(id) {
+    deletePlayerUrl = deletePlayerUrl + id;
+    out(deletePlayerUrl);
+
+    const fetchOptions = {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json",
+        },
+    };
+    //calls API (Backend) and wait for return
+    const response = await fetch(deletePlayerUrl, fetchOptions);
+    if (!response) {
+        alert("Something went wrong with delete json");
+    } else {
+        alert("Player is deleted");
+    }
+    return response;
 }
