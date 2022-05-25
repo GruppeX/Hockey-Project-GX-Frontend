@@ -23,6 +23,8 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="../css/loginStyle.css" />
+    <script defer src="../js/config.js"></script>
+    <script defer src="../js/login.js"></script>
   </head>
   <body>
     <section class="login py-5 bg-light">
@@ -34,27 +36,31 @@
           <div class="col-lg-7 text-center py-5">
             <h1 class="welcome">Welcome</h1>
 
-            <form>
+            <form id="loginForm">
               <div class="form-row py-3 pt-5">
                 <div class="offset-1 col-lg-10">
-                  <input type="text" class="inp px-3" placeholder="Username" />
+                  <input name="username" id="loginUsername" type="text" class="inp px-3" placeholder="Username" required/>
                 </div>
               </div>
               <div class="form-row py-3">
                 <div class="offset-1 col-lg-10">
                   <input
+                          id="loginPassword"
+                          name="password"
                     type="password"
                     class="inp px-3"
                     placeholder="Password"
+                          required
                   />
                 </div>
               </div>
               <div class="form-row py-3">
                 <div class="offset-1 col-lg-10">
-                  <button class="btn1">Login</button>
+                  <button id="loginBtn" class="btn1" type="submit">Login</button>
                 </div>
               </div>
             </form>
+
           </div>
         </div>
       </div>
