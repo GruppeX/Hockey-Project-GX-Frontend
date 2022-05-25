@@ -16,7 +16,7 @@ async function createSearchListDelete() {
         button.innerText +=
             player.firstName + "  " + player.lastName + "  |  " + player.role;
         button.onclick = function () {
-      
+
             deletePlayer(player);
             playerMap.clear();// shall we make it here?
         };
@@ -24,6 +24,7 @@ async function createSearchListDelete() {
         button.setAttribute("data-bs-dismiss", "modal");
         li.appendChild(button);
         playerList.appendChild(li);
+
     });
 }
 
