@@ -12,11 +12,10 @@ async function createSearchListDelete() {
         button.type = "button";
         button.innerText +=
             player.firstName + "  " + player.lastName + "  |  " + player.role;
-        let id = player.playerId;
         button.onclick = function () {
-            out(id);
-            deletePlayer(id);
-            playerMap.clear();
+      
+            deletePlayer(player);
+            playerMap.clear(); // is this necessary?
         };
         button.classList.add("list-group-item", "list-group-item-action");
         button.setAttribute("data-bs-dismiss", "modal");
@@ -46,18 +45,20 @@ function searchPlayersDelete() {
 deletePlayerBtn.addEventListener("click", deletePlayer);*/
 
 
-let deletePlayerUrl = baseUrl + deleteUrl + "player/";
+
 
 /**
  * fetch starts a request and returns a promise
  * async/await syntax fits great with fetch() because it simplifies the work with promises.
- * @param id
+ * @param {Object}player
  * @returns {Promise<Response>}
  */
 
-async function deletePlayer(id) {
-    deletePlayerUrl = deletePlayerUrl + id;
+
+async function deletePlayer(player) {
+   const deletePlayerUrl = deletePlayerUrl + player.playerId;
     out(deletePlayerUrl);
+
 
     const fetchOptions = {
         method: "DELETE",
