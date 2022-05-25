@@ -35,6 +35,7 @@ async function createSearchList() {
     button.onclick = function () {
       selectedPlayerCard(player);
       selectedPlayerCardField(player);
+      makeStylePlayerCards(player);
     };
     button.classList.add("list-group-item", "list-group-item-action");
     button.setAttribute("data-bs-dismiss", "modal");
