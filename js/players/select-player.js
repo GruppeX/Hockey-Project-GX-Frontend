@@ -1,4 +1,4 @@
-const playerMap = new Map();
+let allPlayers = [];
 const findPlayerNav = document.getElementById("findPlayerNav");
 
 
@@ -10,13 +10,10 @@ findPlayerNav.addEventListener("click", createSearchList);
  */
 
 async function createPlayerMap() {
-  const playerList = await getAllPlayers();
-  // sorting our array with players by firstname
-  playerList.sort((a, b) => a.firstName.localeCompare(b.firstName));
+  allPlayers = await getAllPlayers();
 
-  playerList.forEach((player) => {
-    playerMap.set(player.playerId, player);
-  });
+  // sorting our array with players by firstname
+  allPlayers.sort((a, b) => a.firstName.localeCompare(b.firstName));
 }
 
 /**
@@ -26,8 +23,15 @@ async function createPlayerMap() {
 
 async function createSearchList() {
   await createPlayerMap();
-  let playerList = document.getElementById("selectPlayer");
-  playerMap.forEach((player) => {
+  let searchList = document.getElementById("selectPlayer");
+
+  //Remove all children
+  while (searchList.hasChildNodes()) {
+    searchList.removeChild(searchList.lastChild);
+  }
+
+  //Generate new buttons (Children)
+  allPlayers.forEach((player) => {
     let li = document.createElement("li");
     li.classList.add("player-list-tile");
     let button = document.createElement("button");
@@ -40,7 +44,7 @@ async function createSearchList() {
     button.classList.add("list-group-item", "list-group-item-action");
     button.setAttribute("data-bs-dismiss", "modal");
     li.appendChild(button);
-    playerList.appendChild(li);
+    searchList.appendChild(li);
   });
 }
 
