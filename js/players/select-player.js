@@ -1,7 +1,6 @@
 let allPlayers = [];
 const findPlayerNav = document.getElementById("findPlayerNav");
 
-
 findPlayerNav.addEventListener("click", createSearchList);
 
 /**
