@@ -31,6 +31,7 @@ async function filterGoalKeepers() {
 /**
  * filter all players to only return sweepers
  * @returns {Promise<*[]>} list with sweepers
+ * @author Jackie
  */
 async function filterSweepers() {
   await getAllPlayers();
@@ -46,6 +47,7 @@ async function filterSweepers() {
 /**
  * filter all players to only return defenders
  * @returns {Promise<*[]>} list with defenders
+ * @author Jackie
  */
 async function filterDefenders() {
   await getAllPlayers();
@@ -61,6 +63,7 @@ async function filterDefenders() {
 /**
  * filter all players to only return midfielders
  * @returns {Promise<*[]>} list with midfielders
+ * @author Jackie
  */
 async function filterMidfielders() {
   await getAllPlayers();
@@ -76,6 +79,7 @@ async function filterMidfielders() {
 /**
  * filter all players to only return attackers
  * @returns {Promise<*[]>} list with attackers
+ * @author Jackie
  */
 async function filterAttackers() {
   await getAllPlayers();
@@ -87,16 +91,20 @@ async function filterAttackers() {
   });
   return attackers;
 }
+
+/**
+ * Get player by id
+ * @param {int} id
+ * @returns {Promise<*>}
+ * @author Jens & Jackie
+ */
 async function getPlayerById(id) {
   await getAllPlayers();
   let playerResult;
-  out(id + "id");
   players.forEach((player) => {
     if (player.playerId === id) {
-      out(player + "player for each");
       playerResult = player;
     }
   });
-  out(playerResult + "plaer get");
   return playerResult;
 }

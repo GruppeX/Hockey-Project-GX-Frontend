@@ -1,6 +1,10 @@
 const playerUrl = baseUrl + updateUrl + "player/";
 let updateForm;
 
+/**
+ * Creating updateForm
+ * @author Jens, Jackie & Jakob
+ */
 function createFormEventListener() {
   updateForm = document.getElementById("editPlayerForm");
   updateForm.addEventListener("submit", updateButton);
@@ -41,8 +45,8 @@ async function updatePlayer(player) {
   return response;
 }
 /**
- *
- * @param value
+ * Tage player by id and sets value
+ * @param {int} value
  * @returns {Promise<void>}
  * @author Jens, Jackie & Jakob
  */
@@ -60,19 +64,19 @@ async function selectedPlayerById(value) {
 }
 
 /**
- *
- * @param event
+ * Takes player info and sent it to updatePlayer
+ * @param {Object} event
  * @returns {Promise<void>}
+ * @author Jens, Jackie & Jakob
  */
 async function updateButton(event) {
   event.preventDefault();
   const form = event.currentTarget;
+
   try {
     const formData = new FormData(form);
     const plainFormData = Object.fromEntries(formData.entries());
     await updatePlayer(plainFormData);
-
     selectedPlayerCard(plainFormData);
   } catch (err) {}
-  //findButtonSelected(plainFormData[0]);
 }
