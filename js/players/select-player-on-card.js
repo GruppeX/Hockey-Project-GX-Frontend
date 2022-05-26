@@ -10,7 +10,7 @@ let selectedNumber;
 function selectedPlayer(player) {
   document.getElementById(selectedCard).innerText =
     player.firstName + " " + player.lastName;
-  let editPlayer = document.getElementById("editPlayer"+selectedNumber);
+  let editPlayer = document.getElementById("editPlayer" + selectedNumber);
   editPlayer.value = player.playerId;
 
   const playerField = document.getElementById(selectedPlayerField);

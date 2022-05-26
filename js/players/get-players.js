@@ -89,13 +89,12 @@ async function filterAttackers() {
 }
 async function getPlayerById(id) {
   await getAllPlayers();
- let playerResult;
-out(id +"id");
+  let playerResult;
+  out(id + "id");
   players.forEach((player) => {
-
     if (player.playerId === id) {
       out(player + "player for each");
-     playerResult = player;
+      playerResult = player;
     }
   });
   out(playerResult + "plaer get");

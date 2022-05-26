@@ -2,8 +2,8 @@ const playerUrl = baseUrl + updateUrl + "player/";
 let updateForm;
 
 function createFormEventListener() {
-    updateForm = document.getElementById("editPlayerForm");
-    updateForm.addEventListener("submit", updateButton);
+  updateForm = document.getElementById("editPlayerForm");
+  updateForm.addEventListener("submit", updateButton);
 }
 
 /**
@@ -16,68 +16,64 @@ function createFormEventListener() {
  */
 
 async function updatePlayer(player) {
-    out("player - " + player);
-    const url = playerUrl + player.playerId;
-    out(url);
+  out("player - " + player);
+  const url = playerUrl + player.playerId;
+  out(url);
 
-    const jsonString = JSON.stringify(player);
+  const jsonString = JSON.stringify(player);
 
-    const fetchOptions = {
-        method: "PUT",
-        headers: {
-            "Content-type": "application/json",
-        },
-        body: jsonString,
-    };
-    //calls API (Backend) and wait for return
-    const response = await fetch(url, fetchOptions);
+  const fetchOptions = {
+    method: "PUT",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: jsonString,
+  };
+  //calls API (Backend) and wait for return
+  const response = await fetch(url, fetchOptions);
 
-    out(response);
-    if (!response) {
-        alert("Something went wrong");
-        out("Det gik ikke godt med update");
+  out(response);
+  if (!response) {
+    alert("Something went wrong");
+    out("Det gik ikke godt med update");
+  } else {
+    if (response.ok) {
+      alert(player.firstName + " is updated");
     } else {
-        if (response.ok) {
-            alert(player.firstName + " is updated");
-        } else {
-            alert("Something went wrong\nERROR status: " + response.status);
-        }
+      alert("Something went wrong\nERROR status: " + response.status);
     }
-    return response;
+  }
+  return response;
 } // Update player end
 
-
 async function selectedPlayerById(value) {
-    out(value + "value");
-    let player = await getPlayerById(parseInt(value));
-    out(player);
-    let editId = document.getElementById("editId");
-    let firstNameEdit = document.getElementById("firstNameEdit");
-    let lastNameEdit = document.getElementById("lastNameEdit");
-    let roleEdit = document.getElementById("roleEdit");
-    editId.value = player.playerId;
-    firstNameEdit.value = player.firstName;
-    lastNameEdit.value = player.lastName;
-    roleEdit.value = player.role;
-    out(player.playerId);
-    createFormEventListener();
+  out(value + "value");
+  let player = await getPlayerById(parseInt(value));
+  out(player);
+  let editId = document.getElementById("editId");
+  let firstNameEdit = document.getElementById("firstNameEdit");
+  let lastNameEdit = document.getElementById("lastNameEdit");
+  let roleEdit = document.getElementById("roleEdit");
+  editId.value = player.playerId;
+  firstNameEdit.value = player.firstName;
+  lastNameEdit.value = player.lastName;
+  roleEdit.value = player.role;
+  out(player.playerId);
+  createFormEventListener();
 }
 
 async function updateButton(event) {
-    event.preventDefault();
-    const form = event.currentTarget;
-    out(form);
-    try {
-        const formData = new FormData(form);
-        const plainFormData = Object.fromEntries(formData.entries());
-        out(plainFormData);
-        await updatePlayer(plainFormData);
-        out(plainFormData.playerId);
+  event.preventDefault();
+  const form = event.currentTarget;
+  out(form);
+  try {
+    const formData = new FormData(form);
+    const plainFormData = Object.fromEntries(formData.entries());
+    out(plainFormData);
+    await updatePlayer(plainFormData);
+    out(plainFormData.playerId);
 
-        selectedPlayer(plainFormData);
-
-    } catch (err) {
-
-    }
-    //findButtonSelected(plainFormData[0]);
+    selectedPlayer(plainFormData);
+  } catch (err) {}
+  //findButtonSelected(plainFormData[0]);
 }
