@@ -1,18 +1,27 @@
 //generate api from config file
 const url = baseUrl + createUrl + "player";
 
-//execute function createFormEventListener when html is loaded
+// execute function createFormEventListener when html is loaded
 document.addEventListener("DOMContentLoaded", createFormEventListener);
 
 let playerForm;
 
-//add eventListener to html form
+/**
+ * add eventListener to html form
+ *  @author Vitaliy
+ */
+
 function createFormEventListener() {
   playerForm = document.getElementById("createPlayerForm");
   playerForm.addEventListener("submit", handleFormSubmit);
 }
 
-//handle form submit and return response with the result
+/**
+ * handle form submit and return response with the result
+ * @param {Object} event
+ *  @author Vitaliy
+ */
+
 async function handleFormSubmit(event) {
   //prevent Default prevents from performing default form submit (send itself to the backend)
   event.preventDefault();
@@ -31,7 +40,14 @@ async function handleFormSubmit(event) {
   }
 }
 
-//post formData as JSON
+/**
+ * post formData as JSON
+ * @param {string} url
+ * @param {Object} formData
+ * @return {Object} response
+ *  @author Vitaliy
+ */
+
 async function postFormDataAsJson(url, formData) {
   const plainFormData = Object.fromEntries(formData.entries());
   out(plainFormData);
