@@ -144,11 +144,11 @@
 </div>
 <!--    Delete player modal box-->
 <!-- "Are you sure" Modal box -->
-<div class="modal fade" id="areYouSureBox" tabindex="-1" aria-hidden="true">
+<div class="modal fade" aria-labelledby="areYouSureLabel" id="areYouSureBox" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" >Are you sure?</h5>
+                <h5 class="modal-title" id="areYouSureLabel" >Are you sure?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="areYouSureText">
@@ -162,7 +162,8 @@
 </div>
 <div
         id="deletePlayer"
-        class="modal fade"
+        aria-labelledby="deletePlayerLabel"
+        class="modal"
         tabindex="-1"
         role="dialog"
         aria-hidden="true"
@@ -170,7 +171,7 @@
     <div class="modal-dialog">
         <div class="modal-content" style="width: 100.1%">
             <div class="modal-header" style="background-color: #027dab">
-                <h5 class="modal-title" style="color: white">Delete player</h5>
+                <h5 class="modal-title" id="deletePlayerLabel" style="color: white">Delete player</h5>
                 <button
                         type="button"
                         class="btn-close btn-close-white"

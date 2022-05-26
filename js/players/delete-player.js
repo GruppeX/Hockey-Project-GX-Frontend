@@ -78,7 +78,7 @@ async function deletePlayer(player) {
     if (!response) {
         alert("Something went wrong with delete json");
     } else {
-        alert("Player is deleted");
+        alert(player.firstName + " " + player.lastName + " is deleted");
     }
     return response;
 }
