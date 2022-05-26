@@ -1,9 +1,6 @@
 const findPlayerNavDelete = document.getElementById("deletePlayerNav");
 findPlayerNavDelete.addEventListener("click", createSearchListDelete);
 
-/*const deletePlayerBtn = document.getElementById("deletePlayer");
-deletePlayerBtn.addEventListener("click", deletePlayer);*/
-
 
 async function createSearchListDelete() {
     await createPlayerMap();
@@ -16,21 +13,18 @@ async function createSearchListDelete() {
         let li = document.createElement("li");
         li.classList.add("player-list-tile");
         let button = document.createElement("button");
-        button.setAttribute('data-bs-target', '#areYouSureBox');
         button.setAttribute('data-bs-toggle', 'modal');
-        button.setAttribute('data-bs-dismiss', 'modal');
-
+        button.setAttribute('data-bs-target', '#areYouSureBox');
         button.type = "button";
         button.innerText +=
             player.firstName + "  " + player.lastName + "  |  " + player.role;
         button.onclick = async function () {
-            let AYSBox = document.getElementById('areYouSureBox');
+            let AYSText = document.getElementById('areYouSureText');
+            AYSText.innerText = "Are you sure you want to delete " + player.firstName + " " + player.lastName + "?" ;
             let deleteConfirm = document.getElementById('deleteConfirm');
-            deleteConfirm.addEventListener('click', () => deletePlayer(player));
-
+            deleteConfirm.addEventListener('click', async () => await deletePlayer(player));
         };
-        button.classList.add("list-group-item", "list-group-item-action");
-        button.setAttribute("data-bs-dismiss", "modal");
+        button.classList.add("list-group-item", "list-group-item-action", "btn");
         li.appendChild(button);
         playerList.appendChild(li);
     });
