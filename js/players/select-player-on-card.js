@@ -6,7 +6,6 @@ let selectedCardName;
 let color;
 let styleColor;
 
-
 /**
  * Adds firstname and lastname on specific playerCard from given player object
  * @param {Object} player
@@ -19,7 +18,6 @@ function selectedPlayerCard(player) {
 
   let editPlayer = document.getElementById("editPlayer" + selectedNumber);
   editPlayer.value = player.playerId;
-
 
   const selectedCard = document.getElementById(
     "card" + selectedCardName.replace(/[^0-9]/g, "")
@@ -36,7 +34,6 @@ function selectedPlayerCard(player) {
  */
 
 function selectedPlayerCardField(player) {
-
   const playerField = document.getElementById(selectedPlayerField);
   let tags = playerField.getElementsByTagName("p");
   // Remove old p tag if any
