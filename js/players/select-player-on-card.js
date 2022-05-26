@@ -1,4 +1,7 @@
 let selectedPlayerField;
+
+let selectedNumber;
+
 let selectedCardName;
 let color;
 let styleColor;
@@ -12,6 +15,10 @@ let styleColor;
 function selectedPlayerCard(player) {
   document.getElementById(selectedCardName).innerText =
     player.firstName + " " + player.lastName;
+
+  let editPlayer = document.getElementById("editPlayer" + selectedNumber);
+  editPlayer.value = player.playerId;
+
   const selectedCard = document.getElementById(
     "card" + selectedCardName.replace(/[^0-9]/g, "")
   );
@@ -87,4 +94,5 @@ async function findButtonSelected(cardNumber) {
   await createSearchList();
   selectedCardName = "playerNameCard" + cardNumber;
   selectedPlayerField = "p" + cardNumber;
+  selectedNumber = cardNumber;
 }

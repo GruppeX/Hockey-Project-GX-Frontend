@@ -44,6 +44,7 @@
   <body class="d-flex flex-column min-vh-100">
     <!-- modal box's -->
     <!-- Edit player modal box -->
+    <!---->
     <div
       id="editPlayer"
       class="modal fade"
@@ -51,7 +52,7 @@
       role="dialog"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog" id="modalEdit">
         <div class="modal-content" style="width: 100.1%">
           <div class="modal-header" style="background-color: #027dab">
             <h5 class="modal-title" id="exampleModalLabel" style="color: white">
@@ -64,24 +65,71 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">Her skal information om update være</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              id="savePlayer"
-              style="background-color: #027dab"
-              type="button"
-              class="btn btn-primary save-btn"
-            >
-              Save changes
-            </button>
-          </div>
+          <form id="editPlayerForm" class="form-floating" method="post">
+            <div class="modal-body">
+              <input name="playerId" id="editId" style="display: none" />
+              <div class="form-floating mb-3">
+                <input
+                  name="firstName"
+                  type="text"
+                  class="form-control"
+                  id="firstNameEdit"
+                  placeholder="First Name"
+                  minlength="1"
+                  required
+                  onkeypress="return (event.charCode > 64 &&
+                                   event.charCode < 91) ||
+                                    (event.charCode > 96 &&
+                                     event.charCode < 123)"
+                />
+                <label for="firstNameCreate">First Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  name="lastName"
+                  type="text"
+                  class="form-control"
+                  id="lastNameEdit"
+                  placeholder="Last Name"
+                  required
+                  onkeypress="return (event.charCode > 64 &&
+                                event.charCode < 91) ||
+                                 (event.charCode > 96 &&
+                                  event.charCode < 123)"
+                />
+                <label for="lastNameEdit">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select name="role" class="form-select" id="roleEdit" required>
+                  <option selected disabled value="">Choose...</option>
+                  <option value="Goalkeeper">Goalkeeper</option>
+                  <option value="Sweeper">Sweeper</option>
+                  <option value="Defender">Defender</option>
+                  <option value="Midfielder">Midfielder</option>
+                  <option value="Attacker">Attacker</option>
+                </select>
+                <label for="roleEdit">Role</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                id="submitEdit"
+                data-bs-dismiss="modal"
+                style="background-color: #027dab"
+              >
+                savePlayer
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -192,7 +240,7 @@
                                  (event.charCode > 96 &&
                                   event.charCode < 123)"
                 />
-                <label for="lastNameCreate">Last Name</label>
+                <label for="lastNameEdit">Last Name</label>
               </div>
               <div class="form-floating mb-3">
                 <select
@@ -208,7 +256,7 @@
                   <option value="Midfielder">Midfielder</option>
                   <option value="Attacker">Attacker</option>
                 </select>
-                <label for="roleCreate">Role</label>
+                <label for="roleEdit">Role</label>
               </div>
             </div>
             <div class="modal-footer">
@@ -345,6 +393,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer1"
+                onclick="selectedPlayerById(this.value); findButtonSelected(1)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -459,6 +509,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer2"
+                onclick="selectedPlayerById(this.value); findButtonSelected(2)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -573,6 +625,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer3"
+                onclick="selectedPlayerById(this.value); findButtonSelected(3)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -687,6 +741,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer4"
+                onclick="selectedPlayerById(this.value); findButtonSelected(4)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -801,6 +857,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer5"
+                onclick="selectedPlayerById(this.value); findButtonSelected(5)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -915,6 +973,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer6"
+                onclick="selectedPlayerById(this.value); findButtonSelected(6)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1029,6 +1089,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer7"
+                onclick="selectedPlayerById(this.value); findButtonSelected(7)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1143,6 +1205,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer8"
+                onclick="selectedPlayerById(this.value); findButtonSelected(8)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1257,6 +1321,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer9"
+                onclick="selectedPlayerById(this.value); findButtonSelected(9)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1371,6 +1437,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer10"
+                onclick="selectedPlayerById(this.value); findButtonSelected(10)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1485,6 +1553,8 @@
                 type="button"
                 data-bs-toggle="modal"
                 data-bs-target="#editPlayer"
+                id="editPlayer11"
+                onclick="selectedPlayerById(this.value); findButtonSelected(11)"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

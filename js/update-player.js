@@ -1,19 +1,25 @@
-// Update player
-out("Update player");
+const playerUrl = baseUrl + updateUrl + "player/";
+let updateForm;
 
-let playerUrl = baseUrl + updateUrl + "player/";
+/**
+ * Creating updateForm
+ * @author Jens, Jackie & Jakob
+ */
+function createFormEventListener() {
+  updateForm = document.getElementById("editPlayerForm");
+  updateForm.addEventListener("submit", updateButton);
+}
 
 /**
  * get all players from DB
  * filter to one player by id, make to a JSON
  * @param player
  * @returns {Promise<Response>} update one player
- * @ atu
+ * @author Jens, Jackie & Jakob
  */
+
 async function updatePlayer(player) {
-  out("player - " + player);
-  playerUrl = playerUrl + player.playerId;
-  out(playerUrl);
+  const url = playerUrl + player.playerId;
 
   const jsonString = JSON.stringify(player);
 
@@ -25,12 +31,10 @@ async function updatePlayer(player) {
     body: jsonString,
   };
   //calls API (Backend) and wait for return
-  const response = await fetch(playerUrl, fetchOptions);
+  const response = await fetch(url, fetchOptions);
 
-  out(response);
   if (!response) {
     alert("Something went wrong");
-    out("Det gik ikke godt med update");
   } else {
     if (response.ok) {
       alert(player.firstName + " is updated");
@@ -39,20 +43,40 @@ async function updatePlayer(player) {
     }
   }
   return response;
-} // Update player end
+}
+/**
+ * Tage player by id and sets value
+ * @param {int} value
+ * @returns {Promise<void>}
+ * @author Jens, Jackie & Jakob
+ */
+async function selectedPlayerById(value) {
+  let player = await getPlayerById(parseInt(value));
+  let editId = document.getElementById("editId");
+  let firstNameEdit = document.getElementById("firstNameEdit");
+  let lastNameEdit = document.getElementById("lastNameEdit");
+  let roleEdit = document.getElementById("roleEdit");
+  editId.value = player.playerId;
+  firstNameEdit.value = player.firstName;
+  lastNameEdit.value = player.lastName;
+  roleEdit.value = player.role;
+  createFormEventListener();
+}
 
 /**
- * Test in console testUpdate(3);
- * @param index
+ * Takes player info and sent it to updatePlayer
+ * @param {Object} event
  * @returns {Promise<void>}
+ * @author Jens, Jackie & Jakob
  */
-async function testUpdate(index) {
-  let playerlist = [];
-  await getAllPlayers();
-  //players[index].firstName = 'Jens';
-  out("players - " + players[index].isSelected);
-  players[index].isSelected = 1;
-  out("players - " + players[index].isSelected);
+async function updateButton(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
 
-  await updatePlayer(players[index]);
+  try {
+    const formData = new FormData(form);
+    const plainFormData = Object.fromEntries(formData.entries());
+    await updatePlayer(plainFormData);
+    selectedPlayerCard(plainFormData);
+  } catch (err) {}
 }
