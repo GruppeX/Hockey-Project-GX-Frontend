@@ -1,6 +1,11 @@
 const findPlayerNavDelete = document.getElementById("deletePlayerNav");
 findPlayerNavDelete.addEventListener("click", createSearchListDelete);
 
+
+
+
+
+
 /**
  * Creates the entire list of players
  * @returns {Promise<void>}
