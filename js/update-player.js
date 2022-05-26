@@ -73,7 +73,7 @@ async function updateButton(event) {
     await updatePlayer(plainFormData);
     out(plainFormData.playerId);
 
-    selectedPlayer(plainFormData);
+    selectedPlayerCard(plainFormData);
   } catch (err) {}
   //findButtonSelected(plainFormData[0]);
 }
