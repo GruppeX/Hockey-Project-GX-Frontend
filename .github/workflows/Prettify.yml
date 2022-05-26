@@ -1,7 +1,8 @@
 name: Prettify Code
 
 # This action works with pull requests and pushes
-on:
+on: 
+  workflow_dispatch:
   pull_request:
   push:
     branches:
