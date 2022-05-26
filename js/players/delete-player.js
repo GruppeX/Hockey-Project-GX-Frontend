@@ -1,7 +1,11 @@
 const findPlayerNavDelete = document.getElementById("deletePlayerNav");
 findPlayerNavDelete.addEventListener("click", createSearchListDelete);
 
-
+/**
+ * Creates the entire list of players
+ * @returns {Promise<void>}
+ * @author Jackie, Vitaliy & Christoffer
+ */
 async function createSearchListDelete() {
     await createPlayerMap();
     let playerList = document.getElementById("deleteSelectPlayer");
@@ -25,6 +29,11 @@ async function createSearchListDelete() {
     });
 }
 
+/**
+ * Confirmation modal box when deleting a player
+ * @param player
+ * @author Jackie, Vitaliy & Christoffer
+ */
 function confirmDelete(player) {
     let AYSText = document.getElementById('areYouSureText');
     AYSText.innerText = "Are you sure you want to delete " + player.firstName + " " + player.lastName + "?" ;
@@ -33,6 +42,11 @@ function confirmDelete(player) {
     let deleteNotConfirm = document.getElementById('deleteNotConfirm');
     deleteNotConfirm.addEventListener('click', () => player = null);
 }
+
+/**
+ * search Player by firstname, lastname and role
+ * @author Jackie, Vitaliy & Christoffer
+ */
 
 function searchPlayersDelete() { //TO DO: make one shared searchPlayers method
     let input, filter, ul, li, button, i, txtValue;
@@ -52,12 +66,11 @@ function searchPlayersDelete() { //TO DO: make one shared searchPlayers method
 }
 
 /**
- * fetch starts a request and returns a promise
- * async/await syntax fits great with fetch() because it simplifies the work with promises.
- * @param {Object}player
+ * Deletes the player through the url and playerId
+ * @param player
  * @returns {Promise<Response>}
+ * @author Jackie, Vitaliy & Christoffer
  */
-
 
 async function deletePlayer(player) {
     out("player - " + player);
