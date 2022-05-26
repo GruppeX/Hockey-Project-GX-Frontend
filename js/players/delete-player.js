@@ -18,16 +18,20 @@ async function createSearchListDelete() {
         button.type = "button";
         button.innerText +=
             player.firstName + "  " + player.lastName + "  |  " + player.role;
-        button.onclick = async function () {
-            let AYSText = document.getElementById('areYouSureText');
-            AYSText.innerText = "Are you sure you want to delete " + player.firstName + " " + player.lastName + "?" ;
-            let deleteConfirm = document.getElementById('deleteConfirm');
-            deleteConfirm.addEventListener('click', async () => await deletePlayer(player));
-        };
+        button.onclick = () => confirmDelete(player);
         button.classList.add("list-group-item", "list-group-item-action", "btn");
         li.appendChild(button);
         playerList.appendChild(li);
     });
+}
+
+function confirmDelete(player) {
+    let AYSText = document.getElementById('areYouSureText');
+    AYSText.innerText = "Are you sure you want to delete " + player.firstName + " " + player.lastName + "?" ;
+    let deleteConfirm = document.getElementById('deleteConfirm');
+    deleteConfirm.addEventListener('click', async () => await deletePlayer(player));
+    let deleteNotConfirm = document.getElementById('deleteNotConfirm');
+    deleteNotConfirm.addEventListener('click', () => player = null);
 }
 
 function searchPlayersDelete() { //TO DO: make one shared searchPlayers method
